@@ -1,0 +1,238 @@
+.the-home-lets-go-page .features {
+    m-[0_12px_0_0]
+    w-[115px]
+    break-words
+    font-['Plus_Jakarta_Sans']
+    font-medium
+    text-[20px]
+    leading-[1.2]
+    text-[#000000]
+}
+.the-home-lets-go-page {
+    bg-[#FFFFFF]
+    flex
+    p-[27px_0_58px_0]
+    w-[1300px]
+    box-sizing-border
+}
+.the-home-lets-go-page .bg {
+    bg-[#FAFAFA]
+    absolute
+    left-[0px]
+    top-[0px]
+    right-[0px]
+    bottom-[0px]
+    h-[100%]
+}
+.the-home-lets-go-page .navigation {
+    m-[0_106.8px_111px_106.8px]
+    flex
+    flex-row
+    justify-between
+    self-end
+    w-[1154.2px]
+    box-sizing-border
+}
+.the-home-lets-go-page .logo {
+    flex
+    box-sizing-border
+}
+.the-home-lets-go-page .dream-maps {
+    break-words
+    font-['Plus_Jakarta_Sans']
+    font-extrabold
+    text-[30px]
+    tracking-[3px]
+    leading-[1.333]
+    uppercase
+    text-[var(--gray-900,#18181B)]
+}
+.the-home-lets-go-page .menu-items {
+    m-[8px_0_8px_0]
+    flex
+    flex-row
+    justify-between
+    w-[327.2px]
+    h-[fit-content]
+    box-sizing-border
+}
+.the-home-lets-go-page .pricing {
+    break-words
+    font-['Plus_Jakarta_Sans']
+    font-medium
+    text-[20px]
+    leading-[1.2]
+    text-[var(--gray-900,#18181B)]
+}
+.the-home-lets-go-page .about-us {
+    break-words
+    font-['Plus_Jakarta_Sans']
+    font-medium
+    text-[20px]
+    leading-[1.2]
+    text-[var(--gray-900,#18181B)]
+}
+.the-home-lets-go-page .wave-1 {
+    bg-[url('../assets/images/wave_2.png')]
+    bg-[50%_50%]
+    bg-cover
+    bg-no-repeat
+    absolute
+    left-[0px]
+    top-[0px]
+    w-[359px]
+    h-[359px]
+}
+.the-home-lets-go-page .rectangle-34 {
+    rounded-[25px]
+    w-[1070px]
+    h-[908px]
+}
+.the-home-lets-go-page .hey-there-my-name-is-emeka-your-ai-companion-and-iwelcome-you-to-dream-maps-you-have-taken-abig-step-towards-achieving-your-dream-of-success-im-here-to-guide-you-on-an-exciting-journey-of-self-discovery-and-growth-together-well-explore-your-interests-build-on-your-skills-and-find-the-perfect-career-path-for-you-lets-start-unlocking-your-potential-and-mapping-out-your-future-one-dream-at-atime-ready-to-begin {
+    absolute
+    top-[255px]
+    right-[114.9px]
+    break-words
+    font-['Plus_Jakarta_Sans']
+    font-light
+    text-[40px]
+    leading-[1.25]
+    text-[#000000]
+}
+.the-home-lets-go-page .gold-transformed-transformed-1 {
+    bg-[url('../assets/images/gold_transformed_transformed_1.png')]
+    bg-[50%_50%]
+    bg-cover
+    bg-no-repeat
+    absolute
+    right-[0px]
+    bottom-[438px]
+    w-[190px]
+    h-[127px]
+}
+.the-home-lets-go-page .gold-transformed-transformed-11 {
+    bg-[url('../assets/images/gold_transformed_transformed_1.png')]
+    bg-[50%_50%]
+    bg-cover
+    bg-no-repeat
+    m-[0_0_79px_0]
+    self-start
+    w-[190px]
+    h-[127px]
+}
+.the-home-lets-go-page .gold-transformed-transformed-6 {
+    bg-[url('../assets/images/gold_transformed_transformed_1.png')]
+    bg-[50%_50%]
+    bg-cover
+    bg-no-repeat
+    rotate-[-33.282deg]
+    m-[0_0_45.6px_0]
+    w-[228.5px]
+    h-[210.4px]
+}
+.the-home-lets-go-page .gold-transformed-transformed-2 {
+    bg-[url('../assets/images/gold_transformed_transformed_1.png')]
+    bg-[50%_50%]
+    bg-cover
+    bg-no-repeat
+    absolute
+    left-[503px]
+    top-[103px]
+    w-[190px]
+    h-[127px]
+}
+.the-home-lets-go-page .gold-transformed-transformed-3 {
+    bg-[url('../assets/images/gold_transformed_transformed_1.png')]
+    bg-[50%_50%]
+    bg-cover
+    bg-no-repeat
+    absolute
+    left-[-77px]
+    top-[102px]
+    w-[190px]
+    h-[127px]
+}
+.the-home-lets-go-page .gold-transformed-transformed-4 {
+    bg-[url('../assets/images/gold_transformed_transformed_1.png')]
+    bg-[50%_50%]
+    bg-cover
+    bg-no-repeat
+    m-[129px_0_0_0]
+    w-[190px]
+    h-[127px]
+}
+.the-home-lets-go-page .group-35 {
+    rounded-[50px]
+    bg-[#000000]
+    absolute
+    left-[229px]
+    bottom-[507px]
+    flex
+    p-[110px_7.2px_109px_0]
+    w-[811px]
+    box-sizing-border
+}
+.the-home-lets-go-page .group-43 {
+    relative
+    flex
+    p-[140px_0_0_124px]
+    w-[1257px]
+    h-[1118px]
+    box-sizing-border
+}
+.the-home-lets-go-page .container {
+    relative
+    m-[0_0_184px_59px]
+    flex
+    p-[0_112px_0_0]
+    w-[1369px]
+    h-[1118px]
+    box-sizing-border
+}
+.the-home-lets-go-page .container-1 {
+    rounded-[50px]
+    bg-[#D6AD60]
+    relative
+    flex
+    p-[35px_35px_35px_28px]
+    w-[1133px]
+    h-[978px]
+    box-sizing-border
+}
+.the-home-lets-go-page .container-2 {
+    m-[0_0_0_333.5px]
+    flex
+    flex-row
+    justify-between
+    self-center
+    w-[707.5px]
+    box-sizing-border
+}
+.the-home-lets-go-page .container-3 {
+    relative
+    flex
+    flex-col
+    w-[1428px]
+    h-[fit-content]
+    box-sizing-border
+}
+.the-home-lets-go-page .rectangle-36 {
+    rounded-[50px]
+    bg-[#000000]
+    absolute
+    top-[32px]
+    right-[32px]
+    w-[736px]
+    h-[203px]
+}
+.the-home-lets-go-page .lets-gooo {
+    relative
+    break-words
+    font-['Plus_Jakarta_Sans']
+    font-light
+    text-[70px]
+    leading-[0.714]
+    bg-[linear-gradient(#D6AD60,#D6AD60)]
+    text-[transparent]
+    bg-clip-text
+}
