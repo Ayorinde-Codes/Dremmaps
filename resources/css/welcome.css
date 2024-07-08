@@ -1,238 +1,342 @@
-.the-home-lets-go-page .features {
-    m-[0_12px_0_0]
-    w-[115px]
-    break-words
-    font-['Plus_Jakarta_Sans']
-    font-medium
-    text-[20px]
-    leading-[1.2]
-    text-[#000000]
-}
 .the-home-lets-go-page {
-    bg-[#FFFFFF]
-    flex
-    p-[27px_0_58px_0]
-    w-[1300px]
-    box-sizing-border
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 27px 0 58px 0;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  box-sizing: border-box;
 }
+
 .the-home-lets-go-page .bg {
-    bg-[#FAFAFA]
-    absolute
-    left-[0px]
-    top-[0px]
-    right-[0px]
-    bottom-[0px]
-    h-[100%]
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
 }
+
 .the-home-lets-go-page .navigation {
-    m-[0_106.8px_111px_106.8px]
-    flex
-    flex-row
-    justify-between
-    self-end
-    w-[1154.2px]
-    box-sizing-border
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 90%;
+  box-sizing: border-box;
+  margin-bottom: 100px;
 }
+
 .the-home-lets-go-page .logo {
-    flex
-    box-sizing-border
+  display: flex;
+  box-sizing: border-box;
 }
+
 .the-home-lets-go-page .dream-maps {
-    break-words
-    font-['Plus_Jakarta_Sans']
-    font-extrabold
-    text-[30px]
-    tracking-[3px]
-    leading-[1.333]
-    uppercase
-    text-[var(--gray-900,#18181B)]
+  font-family: 'Plus Jakarta Sans';
+  font-weight: 800;
+  font-size: 30px;
+  letter-spacing: 3px;
+  line-height: 1.333;
+  text-transform: uppercase;
+  color: var(--gray-900, #18181b);
 }
+
 .the-home-lets-go-page .menu-items {
-    m-[8px_0_8px_0]
-    flex
-    flex-row
-    justify-between
-    w-[327.2px]
-    h-[fit-content]
-    box-sizing-border
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 327.2px;
+  height: fit-content;
+  box-sizing: border-box;
 }
-.the-home-lets-go-page .pricing {
-    break-words
-    font-['Plus_Jakarta_Sans']
-    font-medium
-    text-[20px]
-    leading-[1.2]
-    text-[var(--gray-900,#18181B)]
-}
+
+.the-home-lets-go-page .features,
+.the-home-lets-go-page .pricing,
 .the-home-lets-go-page .about-us {
-    break-words
-    font-['Plus_Jakarta_Sans']
-    font-medium
-    text-[20px]
-    leading-[1.2]
-    text-[var(--gray-900,#18181B)]
+  font-family: 'Plus Jakarta Sans';
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  color: var(--gray-900, #18181b);
 }
-.the-home-lets-go-page .wave-1 {
-    bg-[url('../assets/images/wave_2.png')]
-    bg-[50%_50%]
-    bg-cover
-    bg-no-repeat
-    absolute
-    left-[0px]
-    top-[0px]
-    w-[359px]
-    h-[359px]
-}
-.the-home-lets-go-page .rectangle-34 {
-    rounded-[25px]
-    w-[1070px]
-    h-[908px]
-}
-.the-home-lets-go-page .hey-there-my-name-is-emeka-your-ai-companion-and-iwelcome-you-to-dream-maps-you-have-taken-abig-step-towards-achieving-your-dream-of-success-im-here-to-guide-you-on-an-exciting-journey-of-self-discovery-and-growth-together-well-explore-your-interests-build-on-your-skills-and-find-the-perfect-career-path-for-you-lets-start-unlocking-your-potential-and-mapping-out-your-future-one-dream-at-atime-ready-to-begin {
-    absolute
-    top-[255px]
-    right-[114.9px]
-    break-words
-    font-['Plus_Jakarta_Sans']
-    font-light
-    text-[40px]
-    leading-[1.25]
-    text-[#000000]
-}
-.the-home-lets-go-page .gold-transformed-transformed-1 {
-    bg-[url('../assets/images/gold_transformed_transformed_1.png')]
-    bg-[50%_50%]
-    bg-cover
-    bg-no-repeat
-    absolute
-    right-[0px]
-    bottom-[438px]
-    w-[190px]
-    h-[127px]
-}
-.the-home-lets-go-page .gold-transformed-transformed-11 {
-    bg-[url('../assets/images/gold_transformed_transformed_1.png')]
-    bg-[50%_50%]
-    bg-cover
-    bg-no-repeat
-    m-[0_0_79px_0]
-    self-start
-    w-[190px]
-    h-[127px]
-}
-.the-home-lets-go-page .gold-transformed-transformed-6 {
-    bg-[url('../assets/images/gold_transformed_transformed_1.png')]
-    bg-[50%_50%]
-    bg-cover
-    bg-no-repeat
-    rotate-[-33.282deg]
-    m-[0_0_45.6px_0]
-    w-[228.5px]
-    h-[210.4px]
-}
-.the-home-lets-go-page .gold-transformed-transformed-2 {
-    bg-[url('../assets/images/gold_transformed_transformed_1.png')]
-    bg-[50%_50%]
-    bg-cover
-    bg-no-repeat
-    absolute
-    left-[503px]
-    top-[103px]
-    w-[190px]
-    h-[127px]
-}
-.the-home-lets-go-page .gold-transformed-transformed-3 {
-    bg-[url('../assets/images/gold_transformed_transformed_1.png')]
-    bg-[50%_50%]
-    bg-cover
-    bg-no-repeat
-    absolute
-    left-[-77px]
-    top-[102px]
-    w-[190px]
-    h-[127px]
-}
-.the-home-lets-go-page .gold-transformed-transformed-4 {
-    bg-[url('../assets/images/gold_transformed_transformed_1.png')]
-    bg-[50%_50%]
-    bg-cover
-    bg-no-repeat
-    m-[129px_0_0_0]
-    w-[190px]
-    h-[127px]
-}
-.the-home-lets-go-page .group-35 {
-    rounded-[50px]
-    bg-[#000000]
-    absolute
-    left-[229px]
-    bottom-[507px]
-    flex
-    p-[110px_7.2px_109px_0]
-    w-[811px]
-    box-sizing-border
-}
-.the-home-lets-go-page .group-43 {
-    relative
-    flex
-    p-[140px_0_0_124px]
-    w-[1257px]
-    h-[1118px]
-    box-sizing-border
-}
-.the-home-lets-go-page .container {
-    relative
-    m-[0_0_184px_59px]
-    flex
-    p-[0_112px_0_0]
-    w-[1369px]
-    h-[1118px]
-    box-sizing-border
-}
-.the-home-lets-go-page .container-1 {
-    rounded-[50px]
-    bg-[#D6AD60]
-    relative
-    flex
-    p-[35px_35px_35px_28px]
-    w-[1133px]
-    h-[978px]
-    box-sizing-border
-}
-.the-home-lets-go-page .container-2 {
-    m-[0_0_0_333.5px]
-    flex
-    flex-row
-    justify-between
-    self-center
-    w-[707.5px]
-    box-sizing-border
-}
+
 .the-home-lets-go-page .container-3 {
-    relative
-    flex
-    flex-col
-    w-[1428px]
-    h-[fit-content]
-    box-sizing-border
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  box-sizing: border-box;
 }
-.the-home-lets-go-page .rectangle-36 {
-    rounded-[50px]
-    bg-[#000000]
-    absolute
-    top-[32px]
-    right-[32px]
-    w-[736px]
-    h-[203px]
+
+.the-home-lets-go-page .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 80%;
+  position: relative;
+  box-sizing: border-box;
+  padding-top: 100px;
 }
+
+.the-home-lets-go-page .group-43 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 100%;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.the-home-lets-go-page .container-1 {
+  border-radius: 50px;
+  background-color: #d6ad60;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.the-home-lets-go-page .rectangle-34 {
+  border-radius: 50px;
+  width: 100%;
+  height: 100%;
+}
+
+.the-home-lets-go-page .group-35 {
+  border-radius: 50px;
+  background-color: #000000;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  box-sizing: border-box;
+  padding: 110px 7.2px 109px 0;
+}
+
 .the-home-lets-go-page .lets-gooo {
-    relative
-    break-words
-    font-['Plus_Jakarta_Sans']
-    font-light
-    text-[70px]
-    leading-[0.714]
-    bg-[linear-gradient(#D6AD60,#D6AD60)]
-    text-[transparent]
-    bg-clip-text
+  position: relative;
+  font-family: 'Plus Jakarta Sans';
+  font-weight: 300;
+  font-size: 70px;
+  line-height: 0.714;
+  background: linear-gradient(#d6ad60, #d6ad60);
+  color: transparent;
+  background-clip: text;
+}
+
+.the-home-lets-go-page .wave-1 {
+  background-image: url('../assets/images/wave_2.png');
+  background-position: top left;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: -130px;
+  top: -140px;
+  width: 359px;
+  height: 359px;
+}
+
+.the-home-lets-go-page .hey-there-my-name-is-emeka {
+  position: absolute;
+  top: 60px;
+  right: 100px;
+  padding: 120px;
+  font-family: 'Plus Jakarta Sans';
+  font-weight: 300;
+  font-size: 40px;
+  line-height: 1.25;
+  color: #000000;
+}
+
+.the-home-lets-go-page .gold-transformed-1,
+.the-home-lets-go-page .gold-transformed-2,
+.the-home-lets-go-page .gold-transformed-3,
+.the-home-lets-go-page .gold-transformed-4,
+.the-home-lets-go-page .gold-transformed-6,
+.the-home-lets-go-page .gold-transformed-11 {
+  position: absolute;
+}
+
+.the-home-lets-go-page .gold-transformed-1 {
+  background-image: url('../assets/images/gold_transformed_1.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  right: 44px;
+  top: 370px;
+  width: 200px;
+  height: 200px;
+}
+
+.the-home-lets-go-page .gold-transformed-2 {
+  background-image: url('../assets/images/gold_transformed_1.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  left: -15px;
+  top: 165px;
+  width: 136px;
+  height: 136px;
+}
+
+.the-home-lets-go-page .gold-transformed-3 {
+  background-image: url('../assets/images/gold_transformed_1.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  top: 150px;
+  width: 136px;
+  height: 136px;
+}
+
+.the-home-lets-go-page .gold-transformed-4 {
+  background-image: url('../assets/images/gold_transformed_1.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  left: -15px;
+  top: 165px;
+  width: 136px;
+  height: 136px;
+}
+
+.the-home-lets-go-page .gold-transformed-6 {
+  background-image: url('../assets/images/gold_transformed_1.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  left: 600px;
+  top: 195px;
+  width: 136px;
+  height: 136px;
+}
+
+.the-home-lets-go-page .gold-transformed-11 {
+  background-image: url('../assets/images/gold_transformed_1.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  left: 928px;
+  top: 175px;
+  width: 136px;
+  height: 136px;
+}
+
+.the-home-lets-go-page .container-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 30%;
+  position: relative;
+  box-sizing: border-box;
+}
+
+@media (max-width: 1200px) {
+  .the-home-lets-go-page .hey-there-my-name-is-emeka {
+    font-size: 35px;
+    padding: 100px;
+    top: 50px;
+    right: 80px;
+  }
+  
+  .the-home-lets-go-page .lets-gooo {
+    font-size: 60px;
+  }
+
+  .the-home-lets-go-page .group-35 {
+    padding: 90px 7.2px 89px 0;
+  }
+}
+
+@media (max-width: 992px) {
+  .the-home-lets-go-page .navigation {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .the-home-lets-go-page .menu-items {
+    width: 100%;
+    justify-content: space-around;
+    margin-top: 10px;
+  }
+  
+  .the-home-lets-go-page .hey-there-my-name-is-emeka {
+    font-size: 30px;
+    padding: 80px;
+    top: 40px;
+    right: 60px;
+  }
+  
+  .the-home-lets-go-page .lets-gooo {
+    font-size: 50px;
+  }
+
+  .the-home-lets-go-page .group-35 {
+    padding: 70px 7.2px 69px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .the-home-lets-go-page .navigation {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+
+  .the-home-lets-go-page .hey-there-my-name-is-emeka {
+    font-size: 25px;
+    padding: 60px;
+    top: 30px;
+    right: 40px;
+  }
+
+  .the-home-lets-go-page .lets-gooo {
+    font-size: 40px;
+  }
+
+  .the-home-lets-go-page .group-35 {
+    padding: 50px 7.2px 49px 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .the-home-lets-go-page .dream-maps {
+    font-size: 24px;
+  }
+
+  .the-home-lets-go-page .menu-items {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .the-home-lets-go-page .features,
+  .the-home-lets-go-page .pricing,
+  .the-home-lets-go-page .about-us {
+    font-size: 18px;
+  }
+
+  .the-home-lets-go-page .hey-there-my-name-is-emeka {
+    font-size: 20px;
+    padding: 40px;
+    top: 20px;
+    right: 20px;
+  }
+
+  .the-home-lets-go-page .lets-gooo {
+    font-size: 30px;
+  }
+
+  .the-home-lets-go-page .group-35 {
+    padding: 30px 7.2px 29px 0;
+  }
 }
