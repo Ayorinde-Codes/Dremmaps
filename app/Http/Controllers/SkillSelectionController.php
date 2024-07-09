@@ -9,7 +9,7 @@ class SkillSelectionController extends Controller
 {
     public function showSkillSelectionPage()
     {
-        return inertia('select-skills');
+        return inertia('Onboarding/SkillSelection');
     }
     public function addUserSkills(Request $request)
     {
