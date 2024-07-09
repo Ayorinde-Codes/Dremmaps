@@ -3,16 +3,7 @@
         <div class="bg"></div>
         <div class="gold-transformed-2"></div>
         <div class="container-3">
-            <div class="navigation">
-                <div class="logo">
-                    <span class="dream-maps">DreamMaps</span>
-                </div>
-                <div class="menu-items">
-                    <span class="features">Features</span>
-                    <span class="pricing">Pricing</span>
-                    <span class="about-us">About Us</span>
-                </div>
-            </div>
+            <Navigation />
             <div class="container">
                 <div class="group-43">
                     <div class="container-1">
@@ -30,9 +21,11 @@
                                 fill="#D6AD60"
                             />
                         </svg>
-                        <div class="group-35">
-                            <span class="lets-gooo">Let’s Gooo!</span>
-                        </div>
+                        <Link :href="route('onboarding.select-skills')">
+                            <div class="group-35">
+                                <span class="lets-gooo">Let’s Gooo!</span>
+                            </div>
+                        </Link>
                         <div class="wave-1"></div>
                     </div>
                     <span class="hey-there-my-name-is-emeka">
@@ -61,10 +54,14 @@
     </div>
 </template>
 
-<script>
-export default {
-    name: "Welcome",
-};
+<script setup>
+import Navigation from '@/Components/Navigation.vue';
+import { Link } from "@inertiajs/vue3";
+
+const goToSelectSkills = () => {
+    console.log("here we go")
+    this.$router.push('onboarding/select-skills');
+}
 </script>
 
 <style src="../../../css/welcome.css"></style>

@@ -21,49 +21,6 @@
   width: 100%;
 }
 
-.the-home-lets-go-page .navigation {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 90%;
-  box-sizing: border-box;
-  margin-bottom: 100px;
-}
-
-.the-home-lets-go-page .logo {
-  display: flex;
-  box-sizing: border-box;
-}
-
-.the-home-lets-go-page .dream-maps {
-  font-family: 'Plus Jakarta Sans';
-  font-weight: 800;
-  font-size: 30px;
-  letter-spacing: 3px;
-  line-height: 1.333;
-  text-transform: uppercase;
-  color: var(--gray-900, #18181b);
-}
-
-.the-home-lets-go-page .menu-items {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 327.2px;
-  height: fit-content;
-  box-sizing: border-box;
-}
-
-.the-home-lets-go-page .features,
-.the-home-lets-go-page .pricing,
-.the-home-lets-go-page .about-us {
-  font-family: 'Plus Jakarta Sans';
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
-  color: var(--gray-900, #18181b);
-}
-
 .the-home-lets-go-page .container-3 {
   display: flex;
   flex-direction: column;
@@ -126,7 +83,24 @@
   width: 80%;
   box-sizing: border-box;
   padding: 110px 7.2px 109px 0;
+  z-index: 10; 
 }
+
+/* .the-home-lets-go-page .lets-gooo-link {
+  display: inline-block;
+  font-family: 'Plus Jakarta Sans';
+  font-weight: 300;
+  font-size: 70px;
+  line-height: 0.714;
+  background: linear-gradient(#d6ad60, #d6ad60);
+  color: transparent;
+  background-clip: text;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  padding: 20px 40px;
+  border-radius: 10px;
+} */
 
 .the-home-lets-go-page .lets-gooo {
   position: relative;
@@ -137,6 +111,11 @@
   background: linear-gradient(#d6ad60, #d6ad60);
   color: transparent;
   background-clip: text;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  z-index: 11; /* Ensure it is above other elements */
 }
 
 .the-home-lets-go-page .wave-1 {
@@ -149,6 +128,7 @@
   top: -140px;
   width: 359px;
   height: 359px;
+  z-index: 9; /* Ensure it is below the button */
 }
 
 .the-home-lets-go-page .hey-there-my-name-is-emeka {
@@ -205,8 +185,9 @@
   background-image: url('../assets/images/gold_transformed_1.png');
   background-size: contain;
   background-repeat: no-repeat;
+  /* position: absolute; */
   left: -15px;
-  top: 165px;
+  top: 600px; /* Adjust this value */
   width: 136px;
   height: 136px;
 }
@@ -215,8 +196,9 @@
   background-image: url('../assets/images/gold_transformed_1.png');
   background-size: contain;
   background-repeat: no-repeat;
+  position: absolute;
   left: 600px;
-  top: 195px;
+  top: 450px; /* Adjust this value */
   width: 136px;
   height: 136px;
 }
@@ -225,20 +207,11 @@
   background-image: url('../assets/images/gold_transformed_1.png');
   background-size: contain;
   background-repeat: no-repeat;
+  position: absolute;
   left: 928px;
-  top: 175px;
+  top: 500px; /* Adjust this value */
   width: 136px;
   height: 136px;
-}
-
-.the-home-lets-go-page .container-2 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 30%;
-  position: relative;
-  box-sizing: border-box;
 }
 
 @media (max-width: 1200px) {
@@ -248,7 +221,7 @@
     top: 50px;
     right: 80px;
   }
-  
+
   .the-home-lets-go-page .lets-gooo {
     font-size: 60px;
   }
@@ -259,24 +232,13 @@
 }
 
 @media (max-width: 992px) {
-  .the-home-lets-go-page .navigation {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .the-home-lets-go-page .menu-items {
-    width: 100%;
-    justify-content: space-around;
-    margin-top: 10px;
-  }
-  
   .the-home-lets-go-page .hey-there-my-name-is-emeka {
     font-size: 30px;
     padding: 80px;
     top: 40px;
     right: 60px;
   }
-  
+
   .the-home-lets-go-page .lets-gooo {
     font-size: 50px;
   }
@@ -287,11 +249,6 @@
 }
 
 @media (max-width: 768px) {
-  .the-home-lets-go-page .navigation {
-    width: 100%;
-    margin-bottom: 50px;
-  }
-
   .the-home-lets-go-page .hey-there-my-name-is-emeka {
     font-size: 25px;
     padding: 60px;
@@ -311,18 +268,6 @@
 @media (max-width: 576px) {
   .the-home-lets-go-page .dream-maps {
     font-size: 24px;
-  }
-
-  .the-home-lets-go-page .menu-items {
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-  }
-  
-  .the-home-lets-go-page .features,
-  .the-home-lets-go-page .pricing,
-  .the-home-lets-go-page .about-us {
-    font-size: 18px;
   }
 
   .the-home-lets-go-page .hey-there-my-name-is-emeka {
