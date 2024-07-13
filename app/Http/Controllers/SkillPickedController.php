@@ -8,6 +8,6 @@ class SkillPickedController extends Controller
 {
     public function showSkillPickedPage()
     {
-        return inertia('skill-picked');
+        return inertia('Onboarding/SkillPicked');
     }
 }

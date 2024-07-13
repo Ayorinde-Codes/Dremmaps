@@ -43,6 +43,5 @@ Route::post('/onboarding/add-user-skills', [SkillSelectionController::class, 'ad
 Route::get('/onboarding/additional-details', [AdditionalDetailsController::class, 'showAdditionalDetailsPage'])->name('onboarding.additional-details');
 Route::post('/onboarding/save-additional-details', [AdditionalDetailsController::class, 'saveAdditionalDetails'])->name('onboarding.save-additional-details');
 // });
-// Route::get('/onboarding/user-welcome', [WelcomeController::class, 'showWelcomePage'])->name('onboarding.user-welcome');
 
 require __DIR__ . '/auth.php';
