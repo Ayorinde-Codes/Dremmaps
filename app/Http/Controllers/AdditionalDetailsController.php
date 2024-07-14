@@ -8,7 +8,7 @@ class AdditionalDetailsController extends Controller
 {
     public function showAdditionalDetailsPage()
     {
-        return inertia('additional-details');
+        return inertia('Onboarding/AdditionalDetails');
     }
 
     public function saveAdditionalDetails(Request $request)
