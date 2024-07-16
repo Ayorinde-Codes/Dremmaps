@@ -45,6 +45,8 @@ Route::get('/onboarding/additional-details', [AdditionalDetailsController::class
 Route::post('/onboarding/save-additional-details', [AdditionalDetailsController::class, 'saveAdditionalDetails'])->name('onboarding.save-additional-details');
 // });
 
-Route::get('/feature', [FeatureController::class, 'index'])->name('feature');
+Route::get('/feature', [FeatureController::class, 'feature'])->name('feature');
+Route::get('/pricing', [FeatureController::class, 'pricing'])->name('pricing');
+Route::get('/aboutus', [FeatureController::class, 'aboutus'])->name('aboutus');
 
 require __DIR__ . '/auth.php';
