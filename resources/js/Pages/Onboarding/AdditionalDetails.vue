@@ -65,11 +65,11 @@
       </div>
     </div>
     </div>
-<FooterComponent />
+<Footer />
 </template>
 
 <script setup>
-import FooterComponent from '@/Components/FooterComponent.vue';
+import Footer from '@/Components/Footer.vue';
 
 </script>
 
