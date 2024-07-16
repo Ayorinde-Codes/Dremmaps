@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\FeatureController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\WelcomeController;
 use App\Http\Controllers\SkillSelectionController;
@@ -43,5 +44,7 @@ Route::post('/onboarding/add-user-skills', [SkillSelectionController::class, 'ad
 Route::get('/onboarding/additional-details', [AdditionalDetailsController::class, 'showAdditionalDetailsPage'])->name('onboarding.additional-details');
 Route::post('/onboarding/save-additional-details', [AdditionalDetailsController::class, 'saveAdditionalDetails'])->name('onboarding.save-additional-details');
 // });
+
+Route::get('/feature', [FeatureController::class, 'index'])->name('feature');
 
 require __DIR__ . '/auth.php';
