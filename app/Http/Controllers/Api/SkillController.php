@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
 
+use App\Http\Resources\SkillResource;
 use App\Models\Skill;
 use Illuminate\Http\Request;
 
@@ -9,7 +10,7 @@ class SkillController extends Controller
 {
     public function index()
     {
-        return response()->json(Skill::all());
+        return response()->json(SkillResource::collection(Skill::all()));
     }
 
     public function store(Request $request)

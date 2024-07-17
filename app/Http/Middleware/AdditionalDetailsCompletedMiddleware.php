@@ -15,9 +15,13 @@ class AdditionalDetailsCompletedMiddleware
      */
     public function handle(Request $request, Closure $next)
     {
-        // if (!$request->user()->additionalDetailsCompleted()) {
-        //     return redirect()->route('additional-details');
-        // }
+        if (!$request->user()->skillsCompleted()) {
+            return redirect()->route('onboarding.select-skills');
+        }
+
+        if (!$request->user()->additionalDetailsCompleted()) {
+            return redirect()->route('onboarding.additional-details');
+        }
 
         return $next($request);
     }

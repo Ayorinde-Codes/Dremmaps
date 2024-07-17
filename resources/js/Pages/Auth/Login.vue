@@ -156,7 +156,7 @@ const submit = () => {
         <div class="form-group">
             <label for="password" class="form-label">Password</label>
             <div class="input-container">
-            <input type="password" id="password" autocomplete="current-password" class="custom-input" />
+            <input type="password" id="password" autocomplete="current-password" v-model="form.password" class="custom-input" />
             </div>
             <InputError class="mt-2" :message="form.errors.password" />
         </div>

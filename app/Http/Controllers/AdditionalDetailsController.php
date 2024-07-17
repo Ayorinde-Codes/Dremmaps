@@ -26,5 +26,6 @@ class AdditionalDetailsController extends Controller
         }
 
         return redirect()->route('dashboard');
+        // return redirect(route('dashboard', absolute: false));
     }
 }
