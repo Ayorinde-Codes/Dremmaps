@@ -23,6 +23,7 @@
         <div class="section-header">What Skills Are You Interested In Learning?</div>
         <div class="section-subheader">(Click all that Apply)</div>
         <div class="divider"></div>
+        <!-- loop through data from api -->
         <div class="skills-grid">
           <div class="skill-item">Coding/Programming</div>
           <div class="skill-item">Public Speaking</div>

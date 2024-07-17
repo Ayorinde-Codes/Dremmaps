@@ -50,11 +50,8 @@ class RegisteredUserController extends Controller
 
         Auth::login($user);
 
-        // Check if user completed all necessary steps before redirecting
-        // if (!$user->skillsCompleted() || !$user->additionalDetailsCompleted()) {
-        //     return redirect()->route('select-skills');
-        // }
+        return redirect()->route('onboarding.user-welcome');
 
-        return redirect(route('dashboard', absolute: false));
+        // return redirect(route('dashboard', absolute: false));
     }
 }

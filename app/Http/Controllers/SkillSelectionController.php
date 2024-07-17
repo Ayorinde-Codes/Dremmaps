@@ -31,6 +31,6 @@ class SkillSelectionController extends Controller
             ]);
         }
 
-        return redirect()->route('next-step'); // Redirect to the next step in the onboarding process
+        return redirect()->route('onboarding.skill-picked');
     }
 }
