@@ -2,15 +2,20 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Resources\SkillResource;
 use Illuminate\Http\Request;
+use App\Models\Skill;
 use App\Models\UserSkill;
 
 class SkillSelectionController extends Controller
 {
     public function showSkillSelectionPage()
     {
-        return inertia('Onboarding/SkillSelection');
+        return inertia('Onboarding/SkillSelection', [
+            'skills' => SkillResource::collection(Skill::all())
+        ]);
     }
+
     public function addUserSkills(Request $request)
     {
         $request->validate([
@@ -18,8 +23,8 @@ class SkillSelectionController extends Controller
             'skills.*' => 'exists:skills,id',
         ]);
 
-        // $user = Auth::user();
         $user = $request->user();
+        dd($user);
 
         // Remove existing skills if you want to replace them
         $user->userSkills()->delete();

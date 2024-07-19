@@ -18,6 +18,9 @@ return new class extends Migration {
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->string('gender')->nullable();
+            $table->string('department')->nullable();
+            $table->string('school')->nullable();
+            $table->string('school_level')->nullable();
             $table->date('dob')->nullable();
             $table->string('role')->default(UserRoles::USER);
             $table->rememberToken();

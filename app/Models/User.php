@@ -23,6 +23,9 @@ class User extends Authenticatable
         'password',
         'gender',
         'dob',
+        'department',
+        'school',
+        'school_level',
     ];
 
 

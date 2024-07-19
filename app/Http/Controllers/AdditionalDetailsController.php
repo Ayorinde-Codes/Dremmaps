@@ -2,30 +2,33 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Http\Requests\AdditionalDetailsRequest;
+use App\Http\Resources\CategoryResource;
+use App\Models\Category;
 
 class AdditionalDetailsController extends Controller
 {
     public function showAdditionalDetailsPage()
     {
-        return inertia('Onboarding/AdditionalDetails');
+        return inertia('Onboarding/AdditionalDetails', [
+            'categories' => CategoryResource::collection(Category::all())
+        ]);
     }
 
-    public function saveAdditionalDetails(Request $request)
+    public function saveAdditionalDetails(AdditionalDetailsRequest $request)
     {
         $user = $request->user();
 
-        // Save user department and school
-        $user->department = $request->input('department');
-        $user->school = $request->input('school');
-        $user->save();
+        // Save user department, school, and school level
+        $user->update([
+            'department' => $request->input('department'),
+            'school' => $request->input('school'),
+            'school_level' => $request->input('school_level'),
+        ]);
 
-        // Update user skills with selected categories
-        foreach ($request->input('skills', []) as $skillId => $categoryId) {
-            $user->userSkills()->where('skill_id', $skillId)->update(['category_id' => $categoryId]);
-        }
+        // Update category_id for the user's skills
+        $user->userSkills()->update(['category_id' => $request->input('category_id')]);
 
-        return redirect()->route('dashboard');
-        // return redirect(route('dashboard', absolute: false));
+        return redirect(route('dashboard', absolute: false));
     }
 }
