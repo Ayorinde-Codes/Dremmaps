@@ -1,3 +1,12 @@
+<script setup>
+import { Link } from "@inertiajs/vue3";
+import Navigation from '@/Components/Navigation.vue';
+
+const goToSelectSkills = () => {
+    console.log("here we go")
+    this.$router.push('onboarding/select-skills');
+}
+</script>
 <template>
     <div class="the-home-lets-go-page">
         <div class="bg"></div>
@@ -53,15 +62,5 @@
         <div class="gold-transformed-3"></div>
     </div>
 </template>
-
-<script setup>
-import Navigation from '@/Components/Navigation.vue';
-import { Link } from "@inertiajs/vue3";
-
-const goToSelectSkills = () => {
-    console.log("here we go")
-    this.$router.push('onboarding/select-skills');
-}
-</script>
 
 <style src="../../../css/welcome.css"></style>

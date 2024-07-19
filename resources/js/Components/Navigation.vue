@@ -1,20 +1,20 @@
 <template>
     <div class="navigation">
-        <div class="logo">
-            <span class="dream-maps">DreamMaps</span>
-        </div>
+        <Link href="">
+            <div class="logo">
+                <span class="dream-maps">DreamMaps</span>
+            </div>
+        </Link>
         <div class="menu-items">
-            <span class="features">Features</span>
-            <span class="pricing">Pricing</span>
-            <span class="about-us">About Us</span>
+            <Link :href="route('feature')"><span class="features">Features</span> </Link>
+            <Link :href="route('pricing')"><span class="pricing">Pricing</span> </Link>
+            <Link :href="route('aboutus')"><span class="about-us">About Us</span> </Link>
         </div>
     </div>
 </template>
 
-<script>
-export default {
-    name: "Navigation",
-};
+<script setup>
+import { Link } from "@inertiajs/vue3";
 </script>
 
 <style scoped>

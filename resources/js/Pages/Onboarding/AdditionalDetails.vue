@@ -1,6 +1,7 @@
 <script setup>
 import { ref, defineProps } from 'vue';
 import Footer from '@/Components/Footer.vue';
+import AuthNavigation from '@/Components/AuthNavigation.vue'
 
 // Define the props for the component
 defineProps({
@@ -25,21 +26,7 @@ const submitForm = () => {
 <template>
   <div class="full-page">
     <!-- Navigation Bar -->
-    <div class="navigation">
-      <div class="logo">
-        <span class="dream-maps">DreamMaps</span>
-      </div>
-      <div class="menu-items">
-        <span class="menu-item">Features</span>
-        <span class="menu-item">Pricing</span>
-        <span class="menu-item">About Us</span>
-      </div>
-      <div class="auth-buttons">
-        <span class="login">Login</span>
-        <button class="sign-up-button">Sign Up</button>
-      </div>
-    </div>
-
+    <AuthNavigation />
     <!-- Title Section -->
     <div class="title-section">
       <span class="title-text">Sign Up</span>
@@ -115,68 +102,6 @@ const submitForm = () => {
   align-items: center;
   background-color: #FAFAFA;
   padding: 20px;
-}
-
-/* Navigation */
-.navigation {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 50px;
-  box-sizing: border-box;
-}
-
-.logo {
-  display: flex;
-  align-items: center;
-}
-
-.dream-maps {
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-weight: 800;
-  font-size: 16px;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: #18181B;
-}
-
-.menu-items {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.menu-item {
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-weight: 500;
-  font-size: 16px;
-  color: #18181B;
-}
-
-.auth-buttons {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.login {
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-weight: 500;
-  font-size: 16px;
-  color: #18181B;
-}
-
-.sign-up-button {
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-weight: 700;
-  font-size: 16px;
-  color: #FFFFFF;
-  background: linear-gradient(270deg, #D6AD60, #D6AD60);
-  border: none;
-  border-radius: 10px;
-  padding: 8.5px 20px;
-  cursor: pointer;
 }
 
 /* Title Section */
