@@ -36,15 +36,12 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     // onboarding
     Route::get('/onboarding/user-welcome', [WelcomeController::class, 'showWelcomePage'])->name('onboarding.user-welcome');
-    // Route::get('/onboarding/skill-picked', [SkillPickedController::class, 'showSkillPickedPage'])->name('onboarding.skill-picked');
+    Route::get('/onboarding/skill-picked', [SkillPickedController::class, 'showSkillPickedPage'])->name('onboarding.skill-picked');
     Route::get('/onboarding/select-skills', [SkillSelectionController::class, 'showSkillSelectionPage'])->name('onboarding.select-skills');
-    Route::post('/onboarding/add-user-skills', [SkillSelectionController::class, 'addUserSkills'])->name('onboarding.add-user-skills');
     Route::get('/onboarding/additional-details', [AdditionalDetailsController::class, 'showAdditionalDetailsPage'])->name('onboarding.additional-details');
+    Route::post('/onboarding/add-user-skills', [SkillSelectionController::class, 'addUserSkills'])->name('onboarding.add-user-skills');
     Route::post('/onboarding/save-additional-details', [AdditionalDetailsController::class, 'saveAdditionalDetails'])->name('onboarding.save-additional-details');
 });
-
-Route::get('/onboarding/skill-picked', [SkillPickedController::class, 'showSkillPickedPage'])->name('onboarding.skill-picked');
-
 
 Route::get('/feature', [FeatureController::class, 'feature'])->name('feature');
 Route::get('/pricing', [FeatureController::class, 'pricing'])->name('pricing');

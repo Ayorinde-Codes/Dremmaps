@@ -26,13 +26,6 @@
 <script setup>
   import Navigation from '@/Components/Navigation.vue';
   import { Link } from "@inertiajs/vue3";
-
-defineProps({
-  skills: {
-    type: Object,
-  }
-});
-
 </script>
 
 <style scoped>

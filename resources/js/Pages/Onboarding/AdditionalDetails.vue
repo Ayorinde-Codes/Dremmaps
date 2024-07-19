@@ -1,3 +1,27 @@
+<script setup>
+import { ref, defineProps } from 'vue';
+import Footer from '@/Components/Footer.vue';
+
+// Define the props for the component
+defineProps({
+    categories: {
+        type: Object,
+        required: true
+    }
+});
+
+const form = ref({
+  school: '',
+  category_id: '',
+  department: '',
+  school_level: ''
+});
+
+const submitForm = () => {
+    form.post(route('onboarding.save-additional-details'));
+}
+</script>
+
 <template>
   <div class="full-page">
     <!-- Navigation Bar -->
@@ -23,11 +47,34 @@
 
     <!-- Form Section -->
     <div class="form-section">
+      <!-- School Input -->
       <div class="form-group">
-        <label for="school" class="form-label">Your School</label>
+        <label for="school" class="form-label">School</label>
+        <div class="input-container">
+          <input id="school" v-model="form.school" class="custom-input" type="text" placeholder="Enter your school" maxlength="255">
+        </div>
+      </div>
+
+      <!-- Category Select -->
+      <div class="form-group">
+        <label for="category" class="form-label">How good can you say you are at following courses</label>
         <div class="select-container">
-          <select id="school" class="custom-select">
-            <option value="" disabled selected>School High School</option>
+          <select id="category" v-model="form.category_id" class="custom-select">
+            <option value="" disabled>Category</option>
+            <option v-for="(label, index) in categories.data" :key="index" :value="index">
+              {{ label.name }}
+            </option>
+          </select>
+          <img class="input-icon" src="/assets/vectors/vector_23_x2.svg" alt="Dropdown Icon">
+        </div>
+      </div>
+
+      <!-- School Level Select -->
+      <div class="form-group">
+        <label for="school_level" class="form-label">Your School Level</label>
+        <div class="select-container">
+          <select id="school_level" v-model="form.school_level" class="custom-select">
+            <option value="" disabled>School Level</option>
             <option value="high-school">High School</option>
             <option value="college">College</option>
             <option value="university">University</option>
@@ -35,43 +82,31 @@
           <img class="input-icon" src="/assets/vectors/vector_23_x2.svg" alt="Dropdown Icon">
         </div>
       </div>
-      <div class="form-group">
-        <label for="courses" class="form-label">How good can you say you are at following courses</label>
-        <div class="select-container">
-          <select id="courses" class="custom-select">
-            <option value="" disabled selected>Not so good</option>
-            <option value="excellent">Excellent</option>
-            <option value="good">Good</option>
-            <option value="average">Average</option>
-            <option value="poor">Poor</option>
-          </select>
-          <img class="input-icon" src="/assets/vectors/vector_23_x2.svg" alt="Dropdown Icon">
-        </div>
-      </div>
+
+      <!-- Department Select -->
       <div class="form-group">
         <label for="department" class="form-label">Your Department</label>
         <div class="select-container">
-          <select id="department" class="custom-select">
-            <option value="" disabled selected>Art</option>
+          <select id="department" v-model="form.department" class="custom-select">
+            <option value="" disabled>Department</option>
             <option value="science">Science</option>
+            <option value="art">Art</option>
             <option value="commerce">Commerce</option>
             <option value="humanities">Humanities</option>
           </select>
           <img class="input-icon" src="/assets/vectors/vector_30_x2.svg" alt="Dropdown Icon">
         </div>
       </div>
+
+      <!-- Submit Button -->
       <div class="form-submit">
-        <button class="form-submit-button">Continue</button>
+        <button class="form-submit-button" @click="submitForm">Continue</button>
       </div>
     </div>
-    </div>
-<Footer />
+
+    <Footer />
+  </div>
 </template>
-
-<script setup>
-import Footer from '@/Components/Footer.vue';
-
-</script>
 
 <style scoped>
 .full-page {
@@ -146,7 +181,7 @@ import Footer from '@/Components/Footer.vue';
 
 /* Title Section */
 .title-section {
-  margin: 150px 0 20px 0; /* Added margin-top */
+  margin: 150px 0 20px;
 }
 
 .title-text {
@@ -156,14 +191,14 @@ import Footer from '@/Components/Footer.vue';
   background: linear-gradient(91.19deg, #D6AD60 33.5%, #705B32 64.3%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  white-space: nowrap; /* Prevent text from breaking */
+  white-space: nowrap;
 }
 
 /* Form Section */
 .form-section {
   width: 100%;
   max-width: 1000px;
-  margin-bottom: 100px; /* Added margin-bottom */
+  margin-bottom: 100px;
 }
 
 .form-group {
@@ -177,6 +212,43 @@ import Footer from '@/Components/Footer.vue';
   color: #18181B;
 }
 
+.input-container {
+  position: relative;
+  border-radius: 6px;
+  border: 1px solid #8692A6;
+  display: flex;
+  align-items: center;
+  padding: 23.2px 16.8px;
+  margin-bottom: 19px;
+  width: 100%;
+  max-width: 988px;
+  height: 64px;
+  box-sizing: border-box;
+}
+
+.custom-input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  outline: none;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #18181B;
+  width: 100%;
+  background-color: transparent;
+  padding-right: 50px;
+}
+
+.input-icon {
+  position: absolute;
+  right: 16.8px;
+  width: 31px;
+  height: 19.1px;
+  pointer-events: none;
+}
+
 .select-container {
   position: relative;
   border-radius: 6px;
@@ -185,7 +257,8 @@ import Footer from '@/Components/Footer.vue';
   align-items: center;
   padding: 23.2px 16.8px;
   margin-bottom: 19px;
-  width: 988px;
+  width: 100%;
+  max-width: 988px;
   height: 64px;
   box-sizing: border-box;
 }
@@ -202,22 +275,14 @@ import Footer from '@/Components/Footer.vue';
   color: #18181B;
   width: 100%;
   background-color: transparent;
-  padding-right: 50px; /* Adjust padding to make room for icon */
-}
-
-.input-icon {
-  position: absolute;
-  right: 16.8px;
-  width: 31px;
-  height: 19.1px;
-  pointer-events: none;
+  padding-right: 50px;
 }
 
 .form-submit {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%; /* Full width */
+  width: 100%;
 }
 
 .form-submit-button {
@@ -229,8 +294,8 @@ import Footer from '@/Components/Footer.vue';
   border: none;
   border-radius: 10px;
   padding: 15px;
-  width: 100%; /* Full width */
+  width: 100%;
   cursor: pointer;
-  text-align: center; /* Center the text */
+  text-align: center;
 }
 </style>
