@@ -1,4 +1,4 @@
-<script setup>
+<!-- <script setup>
 import { Head, Link } from '@inertiajs/vue3';
 
 defineProps({
@@ -345,4 +345,600 @@ function handleImageError() {
             </div>
         </div>
     </div>
+</template> -->
+
+<template>
+  <div class="full-page">
+    <!-- Navigation Bar -->
+    <div class="navigation">
+      <div class="logo">
+        <span class="dream-maps">DreamMaps</span>
+      </div>
+      <div class="menu-items">
+        <span class="menu-item">Features</span>
+        <span class="menu-item">Pricing</span>
+        <span class="menu-item">About Us</span>
+      </div>
+      <div class="auth-buttons">
+        <span class="login">Login</span>
+        <button class="sign-up-button">Sign Up</button>
+      </div>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="hero-section">
+      <div class="overlay"></div>
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1 class="hero-title">Discover Your Dreams with DreamMaps</h1>
+          <p class="hero-subtitle">Join us to explore, learn, and achieve your goals</p>
+          <button class="hero-button">Get Started</button>
+        </div>
+        <div class="hero-image">
+          <img src="/assets/images/hero_image.png" alt="Hero Image">
+        </div>
+      </div>
+    </div>
+
+    <!-- About Section -->
+    <div class="about-section">
+      <div class="about-content">
+        <div class="about-image">
+          <img src="/assets/images/about_image.png" alt="About Us">
+        </div>
+        <div class="about-text">
+          <span class="about-title">About DreamMaps</span>
+          <div class="about-description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nec ipsum id ligula ultricies volutpat pharetra a nulla. Vestibulum vel orci sed purus euismod tincidunt. Sed sem ex, feugiat eget pretium nec, malesuada non turpis. Aliquam quis vehicula turpis. Suspendisse imperdiet dui quis lobortis aliquet. Mauris rutrum tortor gravida massa dignissim scelerisque.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Features Section -->
+    <div class="features-section">
+      <div class="section-title">Our Features</div>
+      <div class="features-grid">
+        <div class="feature-item">
+          <div class="feature-icon"><img src="/assets/icons/feature1.png" alt="Feature 1"></div>
+          <div class="feature-title">Feature One</div>
+          <div class="feature-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon"><img src="/assets/icons/feature2.png" alt="Feature 2"></div>
+          <div class="feature-title">Feature Two</div>
+          <div class="feature-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon"><img src="/assets/icons/feature3.png" alt="Feature 3"></div>
+          <div class="feature-title">Feature Three</div>
+          <div class="feature-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon"><img src="/assets/icons/feature4.png" alt="Feature 4"></div>
+          <div class="feature-title">Feature Four</div>
+          <div class="feature-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Testimonials Section -->
+    <div class="testimonials-section">
+      <div class="section-title">What Our Users Say</div>
+      <div class="testimonials-grid">
+        <div class="testimonial-item">
+          <div class="testimonial-text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vel orci sed purus euismod tincidunt."</div>
+          <div class="testimonial-author">- John Doe</div>
+        </div>
+        <div class="testimonial-item">
+          <div class="testimonial-text">"Suspendisse imperdiet dui quis lobortis aliquet. Mauris rutrum tortor gravida massa dignissim scelerisque."</div>
+          <div class="testimonial-author">- Jane Smith</div>
+        </div>
+        <div class="testimonial-item">
+          <div class="testimonial-text">"Aenean nec ipsum id ligula ultricies volutpat pharetra a nulla."</div>
+          <div class="testimonial-author">- Mark Johnson</div>
+        </div>
+        <div class="testimonial-item">
+          <div class="testimonial-text">"Aliquam quis vehicula turpis. Suspendisse imperdiet dui quis lobortis aliquet."</div>
+          <div class="testimonial-author">- Sarah Brown</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Call to Action Section -->
+    <div class="cta-section">
+      <div class="cta-content">
+        <div class="cta-text">
+          <span class="cta-title">Join DreamMaps Today</span>
+          <span class="cta-subtitle">Start your journey towards success.</span>
+        </div>
+        <button class="cta-button">Sign Up Now</button>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <Footer />
+  </div>
 </template>
+
+<script setup>
+import Footer from '@/Components/Footer.vue';
+</script>
+
+<style scoped>
+.full-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #FAFAFA;
+  padding: 20px;
+}
+
+/* Navigation */
+.navigation {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 50px;
+  box-sizing: border-box;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.dream-maps {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 800;
+  font-size: 16px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #18181B;
+}
+
+.menu-items {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.menu-item {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #18181B;
+  cursor: pointer;
+}
+
+.auth-buttons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.login {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #18181B;
+  cursor: pointer;
+}
+
+.sign-up-button {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: #FFFFFF;
+  background: linear-gradient(270deg, #D6AD60, #D6AD60);
+  border: none;
+  border-radius: 10px;
+  padding: 8.5px 20px;
+  cursor: pointer;
+}
+
+/* Hero Section */
+.hero-section {
+  width: 100%;
+  max-width: 1500px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 20px;
+  box-sizing: border-box;
+  background: url('/assets/images/hero_background.jpg') no-repeat center center/cover;
+  border-radius: 10px;
+  margin: 20px 0;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+
+.hero-content {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  color: #FFFFFF;
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 600px;
+}
+
+.hero-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 800;
+  font-size: 48px;
+  line-height: 1.2;
+  color: #FFFFFF;
+}
+
+.hero-subtitle {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  color: #FFFFFF;
+}
+
+.hero-button {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: #FFFFFF;
+  background-color: #D6AD60;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 24px;
+  cursor: pointer;
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* About Section */
+.about-section {
+  width: 100%;
+  max-width: 1500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px;
+  box-sizing: border-box;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  margin: 20px 0;
+}
+
+.about-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.about-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.about-text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 600px;
+}
+
+.about-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 800;
+  font-size: 36px;
+  color: #18181B;
+}
+
+.about-description {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #000000;
+}
+
+/* Features Section */
+.features-section {
+  width: 100%;
+  max-width: 1500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 20px;
+  box-sizing: border-box;
+  background-color: #F7F7F7;
+  border-radius: 10px;
+  margin: 20px 0;
+}
+
+.section-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 800;
+  font-size: 36px;
+  color: #18181B;
+  margin-bottom: 20px;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  width: 100%;
+}
+
+.feature-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 20px;
+  background-color: #FFFFFF;
+  border: 1px solid #E0E0E0;
+  border-radius: 10px;
+}
+
+.feature-icon img {
+  max-width: 50px;
+  height: auto;
+}
+
+.feature-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 800;
+  font-size: 24px;
+  color: #18181B;
+}
+
+.feature-description {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #000000;
+  text-align: center;
+}
+
+/* Testimonials Section */
+.testimonials-section {
+  width: 100%;
+  max-width: 1500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 20px;
+  box-sizing: border-box;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  margin: 20px 0;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  width: 100%;
+}
+
+.testimonial-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 20px;
+  background-color: #FFF;
+  border: 1px solid #E0E0E0;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.testimonial-text {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #000000;
+}
+
+.testimonial-author {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: #18181B;
+}
+
+/* Call to Action Section */
+.cta-section {
+  width: 100%;
+  max-width: 1500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px;
+  box-sizing: border-box;
+  background-color: #18181B;
+  border-radius: 10px;
+  margin: 20px 0;
+}
+
+.cta-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.cta-text {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: #FFFFFF;
+}
+
+.cta-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 800;
+  font-size: 36px;
+}
+
+.cta-subtitle {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+}
+
+.cta-button {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: #FFFFFF;
+  background: linear-gradient(270deg, #D6AD60, #D6AD60);
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .navigation {
+    flex-direction: column;
+    padding: 10px 20px;
+  }
+
+  .menu-items {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .auth-buttons {
+    margin-top: 10px;
+  }
+
+  .hero-section {
+    padding: 30px 20px;
+  }
+
+  .hero-title {
+    font-size: 28px;
+  }
+
+  .hero-subtitle {
+    font-size: 20px;
+  }
+
+  .about-section,
+  .cta-section {
+    flex-direction: column;
+    padding: 30px 20px;
+  }
+
+  .about-content,
+  .cta-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .features-section,
+  .testimonials-section {
+    gap: 20px;
+  }
+
+  .feature-item,
+  .testimonial-item {
+    min-width: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navigation {
+    padding: 10px 10px;
+  }
+
+  .dream-maps {
+    font-size: 14px;
+  }
+
+  .menu-item {
+    font-size: 14px;
+  }
+
+  .login, .sign-up-button {
+    font-size: 14px;
+  }
+
+  .hero-title {
+    font-size: 24px;
+  }
+
+  .hero-subtitle {
+    font-size: 18px;
+  }
+
+  .about-title,
+  .section-title {
+    font-size: 24px;
+  }
+
+  .about-description,
+  .feature-title,
+  .testimonial-text {
+    font-size: 14px;
+  }
+
+  .cta-title {
+    font-size: 28px;
+  }
+
+  .cta-subtitle {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title,
+  .cta-title {
+    font-size: 20px;
+  }
+
+  .hero-subtitle,
+  .cta-subtitle {
+    font-size: 16px;
+  }
+
+  .about-title,
+  .feature-title {
+    font-size: 16px;
+  }
+
+  .about-description,
+  .feature-description,
+  .testimonial-text {
+    font-size: 12px;
+  }
+}
+</style>
+
