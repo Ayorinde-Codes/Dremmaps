@@ -26,7 +26,7 @@ Route::get('/dashboard', function () {
         [
             'auth',
             'verified',
-            AdditionalDetailsCompletedMiddleware::class,
+            // AdditionalDetailsCompletedMiddleware::class,
         ]
     )->name('dashboard');
 
