@@ -346,7 +346,6 @@ function handleImageError() {
         </div>
     </div>
 </template> -->
-
 <template>
   <div class="full-page">
     <!-- Navigation Bar -->
@@ -630,7 +629,6 @@ import Footer from '@/Components/Footer.vue';
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 20px;
   width: 100%;
 }
 
@@ -643,14 +641,14 @@ import Footer from '@/Components/Footer.vue';
 .about-text {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 10px;
   max-width: 600px;
 }
 
 .about-title {
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-weight: 800;
-  font-size: 36px;
+  font-size: 32px;
   color: #18181B;
 }
 
@@ -658,7 +656,7 @@ import Footer from '@/Components/Footer.vue';
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-weight: 500;
   font-size: 16px;
-  color: #000000;
+  color: #18181B;
 }
 
 /* Features Section */
@@ -667,10 +665,11 @@ import Footer from '@/Components/Footer.vue';
   max-width: 1500px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   padding: 50px 20px;
   box-sizing: border-box;
-  background-color: #F7F7F7;
+  background-color: #FFFFFF;
   border-radius: 10px;
   margin: 20px 0;
 }
@@ -678,47 +677,47 @@ import Footer from '@/Components/Footer.vue';
 .section-title {
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-weight: 800;
-  font-size: 36px;
+  font-size: 32px;
   color: #18181B;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .features-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
-  width: 100%;
 }
 
 .feature-item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
   padding: 20px;
-  background-color: #FFFFFF;
-  border: 1px solid #E0E0E0;
+  box-sizing: border-box;
+  background-color: #F8F8F8;
   border-radius: 10px;
+  text-align: center;
 }
 
 .feature-icon img {
-  max-width: 50px;
+  max-width: 100%;
   height: auto;
+  margin-bottom: 10px;
 }
 
 .feature-title {
   font-family: 'Plus Jakarta Sans', sans-serif;
-  font-weight: 800;
-  font-size: 24px;
+  font-weight: 700;
+  font-size: 20px;
   color: #18181B;
+  margin-bottom: 10px;
 }
 
 .feature-description {
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-weight: 500;
   font-size: 16px;
-  color: #000000;
-  text-align: center;
+  color: #18181B;
 }
 
 /* Testimonials Section */
@@ -727,6 +726,7 @@ import Footer from '@/Components/Footer.vue';
   max-width: 1500px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   padding: 50px 20px;
   box-sizing: border-box;
@@ -739,17 +739,12 @@ import Footer from '@/Components/Footer.vue';
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
-  width: 100%;
 }
 
 .testimonial-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
   padding: 20px;
-  background-color: #FFF;
-  border: 1px solid #E0E0E0;
+  box-sizing: border-box;
+  background-color: #F8F8F8;
   border-radius: 10px;
   text-align: center;
 }
@@ -758,7 +753,8 @@ import Footer from '@/Components/Footer.vue';
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-weight: 500;
   font-size: 16px;
-  color: #000000;
+  color: #18181B;
+  margin-bottom: 10px;
 }
 
 .testimonial-author {
@@ -777,7 +773,7 @@ import Footer from '@/Components/Footer.vue';
   align-items: center;
   padding: 50px 20px;
   box-sizing: border-box;
-  background-color: #18181B;
+  background-color: #D6AD60;
   border-radius: 10px;
   margin: 20px 0;
 }
@@ -787,25 +783,28 @@ import Footer from '@/Components/Footer.vue';
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  color: #FFFFFF;
 }
 
 .cta-text {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  color: #FFFFFF;
+  max-width: 600px;
 }
 
 .cta-title {
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-weight: 800;
-  font-size: 36px;
+  font-size: 32px;
+  color: #FFFFFF;
 }
 
 .cta-subtitle {
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-weight: 500;
-  font-size: 24px;
+  font-size: 16px;
+  color: #FFFFFF;
 }
 
 .cta-button {
@@ -813,132 +812,25 @@ import Footer from '@/Components/Footer.vue';
   font-weight: 700;
   font-size: 16px;
   color: #FFFFFF;
-  background: linear-gradient(270deg, #D6AD60, #D6AD60);
+  background-color: #18181B;
   border: none;
   border-radius: 10px;
-  padding: 10px 20px;
+  padding: 12px 24px;
   cursor: pointer;
 }
 
-/* Responsive Design */
-@media (max-width: 1200px) {
-  .navigation {
-    flex-direction: column;
-    padding: 10px 20px;
-  }
-
-  .menu-items {
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 10px;
-  }
-
-  .auth-buttons {
-    margin-top: 10px;
-  }
-
-  .hero-section {
-    padding: 30px 20px;
-  }
-
-  .hero-title {
-    font-size: 28px;
-  }
-
-  .hero-subtitle {
-    font-size: 20px;
-  }
-
-  .about-section,
-  .cta-section {
-    flex-direction: column;
-    padding: 30px 20px;
-  }
-
-  .about-content,
-  .cta-content {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-  }
-
-  .features-section,
-  .testimonials-section {
-    gap: 20px;
-  }
-
-  .feature-item,
-  .testimonial-item {
-    min-width: 250px;
-  }
-}
-
-@media (max-width: 768px) {
-  .navigation {
-    padding: 10px 10px;
-  }
-
-  .dream-maps {
-    font-size: 14px;
-  }
-
-  .menu-item {
-    font-size: 14px;
-  }
-
-  .login, .sign-up-button {
-    font-size: 14px;
-  }
-
-  .hero-title {
-    font-size: 24px;
-  }
-
-  .hero-subtitle {
-    font-size: 18px;
-  }
-
-  .about-title,
-  .section-title {
-    font-size: 24px;
-  }
-
-  .about-description,
-  .feature-title,
-  .testimonial-text {
-    font-size: 14px;
-  }
-
-  .cta-title {
-    font-size: 28px;
-  }
-
-  .cta-subtitle {
-    font-size: 20px;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero-title,
-  .cta-title {
-    font-size: 20px;
-  }
-
-  .hero-subtitle,
-  .cta-subtitle {
-    font-size: 16px;
-  }
-
-  .about-title,
-  .feature-title {
-    font-size: 16px;
-  }
-
-  .about-description,
-  .feature-description,
-  .testimonial-text {
-    font-size: 12px;
-  }
+/* Footer */
+footer {
+  width: 100%;
+  max-width: 1500px;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #18181B;
+  color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  margin: 20px 0;
 }
 </style>
-
