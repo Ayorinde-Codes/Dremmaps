@@ -374,7 +374,7 @@ function handleImageError() {
           <button class="hero-button">Get Started</button>
         </div>
         <div class="hero-image">
-          <img src="/assets/images/hero_image.png" alt="Hero Image">
+          <img src="https://via.placeholder.com/600x400" alt="Hero Image">
         </div>
       </div>
     </div>
@@ -383,7 +383,7 @@ function handleImageError() {
     <div class="about-section">
       <div class="about-content">
         <div class="about-image">
-          <img src="/assets/images/about_image.png" alt="About Us">
+          <img src="https://via.placeholder.com/400x400" alt="About Us">
         </div>
         <div class="about-text">
           <span class="about-title">About DreamMaps</span>
@@ -399,22 +399,22 @@ function handleImageError() {
       <div class="section-title">Our Features</div>
       <div class="features-grid">
         <div class="feature-item">
-          <div class="feature-icon"><img src="/assets/icons/feature1.png" alt="Feature 1"></div>
+          <div class="feature-icon"><img src="https://via.placeholder.com/100" alt="Feature 1"></div>
           <div class="feature-title">Feature One</div>
           <div class="feature-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
         </div>
         <div class="feature-item">
-          <div class="feature-icon"><img src="/assets/icons/feature2.png" alt="Feature 2"></div>
+          <div class="feature-icon"><img src="https://via.placeholder.com/100" alt="Feature 2"></div>
           <div class="feature-title">Feature Two</div>
           <div class="feature-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
         </div>
         <div class="feature-item">
-          <div class="feature-icon"><img src="/assets/icons/feature3.png" alt="Feature 3"></div>
+          <div class="feature-icon"><img src="https://via.placeholder.com/100" alt="Feature 3"></div>
           <div class="feature-title">Feature Three</div>
           <div class="feature-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
         </div>
         <div class="feature-item">
-          <div class="feature-icon"><img src="/assets/icons/feature4.png" alt="Feature 4"></div>
+          <div class="feature-icon"><img src="https://via.placeholder.com/100" alt="Feature 4"></div>
           <div class="feature-title">Feature Four</div>
           <div class="feature-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
         </div>
@@ -481,6 +481,8 @@ import Footer from '@/Components/Footer.vue';
   align-items: center;
   padding: 10px 50px;
   box-sizing: border-box;
+  background-color: #FFFFFF;
+  border-bottom: 1px solid #E0E0E0;
 }
 
 .logo {
@@ -547,7 +549,7 @@ import Footer from '@/Components/Footer.vue';
   align-items: center;
   padding: 100px 20px;
   box-sizing: border-box;
-  background: url('/assets/images/hero_background.jpg') no-repeat center center/cover;
+  background-color: #D6AD60;
   border-radius: 10px;
   margin: 20px 0;
 }
@@ -648,7 +650,7 @@ import Footer from '@/Components/Footer.vue';
 .about-title {
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-weight: 800;
-  font-size: 32px;
+  font-size: 36px;
   color: #18181B;
 }
 
@@ -665,7 +667,6 @@ import Footer from '@/Components/Footer.vue';
   max-width: 1500px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   padding: 50px 20px;
   box-sizing: border-box;
@@ -677,7 +678,7 @@ import Footer from '@/Components/Footer.vue';
 .section-title {
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-weight: 800;
-  font-size: 32px;
+  font-size: 36px;
   color: #18181B;
   margin-bottom: 30px;
 }
@@ -686,29 +687,30 @@ import Footer from '@/Components/Footer.vue';
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
+  width: 100%;
 }
 
 .feature-item {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
   padding: 20px;
   box-sizing: border-box;
-  background-color: #F8F8F8;
+  background-color: #F5F5F5;
   border-radius: 10px;
-  text-align: center;
 }
 
 .feature-icon img {
-  max-width: 100%;
+  max-width: 100px;
   height: auto;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .feature-title {
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-weight: 700;
-  font-size: 20px;
+  font-size: 24px;
   color: #18181B;
   margin-bottom: 10px;
 }
@@ -726,7 +728,6 @@ import Footer from '@/Components/Footer.vue';
   max-width: 1500px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   padding: 50px 20px;
   box-sizing: border-box;
@@ -739,14 +740,18 @@ import Footer from '@/Components/Footer.vue';
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
+  width: 100%;
 }
 
 .testimonial-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
   padding: 20px;
   box-sizing: border-box;
-  background-color: #F8F8F8;
+  background-color: #F5F5F5;
   border-radius: 10px;
-  text-align: center;
 }
 
 .testimonial-text {
@@ -783,7 +788,6 @@ import Footer from '@/Components/Footer.vue';
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  color: #FFFFFF;
 }
 
 .cta-text {
@@ -791,12 +795,13 @@ import Footer from '@/Components/Footer.vue';
   flex-direction: column;
   gap: 10px;
   max-width: 600px;
+  color: #FFFFFF;
 }
 
 .cta-title {
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-weight: 800;
-  font-size: 32px;
+  font-size: 36px;
   color: #FFFFFF;
 }
 
@@ -817,20 +822,5 @@ import Footer from '@/Components/Footer.vue';
   border-radius: 10px;
   padding: 12px 24px;
   cursor: pointer;
-}
-
-/* Footer */
-footer {
-  width: 100%;
-  max-width: 1500px;
-  padding: 20px;
-  box-sizing: border-box;
-  background-color: #18181B;
-  color: #FFFFFF;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 10px;
-  margin: 20px 0;
 }
 </style>
