@@ -1,5 +1,18 @@
 <script setup>
-import { Link } from "@inertiajs/vue3";
+import { Link, usePage } from "@inertiajs/vue3";
+defineProps({
+    canLogin: {
+        type: Boolean,
+        required: true
+    },
+    canRegister: {
+        type: Boolean,
+        required: true
+    }
+});
+const page = usePage();
+const isAuthenticated = !!page.props.auth.user;
+// $page.props.auth.user
 </script>
 
 <template>
@@ -15,8 +28,11 @@ import { Link } from "@inertiajs/vue3";
         <Link :href="route('aboutus')"> <span class="menu-item">About Us</span> </Link>
       </div>
       <div class="auth-buttons">
-        <Link :href="route('login')"><span class="login">Login</span> </Link>
-        <Link :href="route('register')"> <button class="sign-up-button">Sign Up</button> </Link>
+        <Link v-if="isAuthenticated" :href="route('dashboard')"><span class="login">Dashboard</span> </Link>
+        <template v-else>
+          <Link :href="route('login')"><span class="login">Login</span> </Link>
+          <Link :href="route('register')"> <button class="sign-up-button">Sign Up</button> </Link>
+        </template>
       </div>
     </div>
 </template>
