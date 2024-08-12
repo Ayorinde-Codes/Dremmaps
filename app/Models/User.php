@@ -7,6 +7,8 @@ use App\Enums\UserRoles;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Http\Request;
+use Illuminate\Database\Eloquent\Builder;
 
 class User extends Authenticatable
 {
@@ -69,5 +71,17 @@ class User extends Authenticatable
     public function userSkills()
     {
         return $this->hasMany(UserSkill::class);
+    }
+
+    public function scopeSearch(Builder $query, Request $request)
+    {
+        return $query->where(function ($query) use ($request) {
+            return $query->when($request->search, function ($query) use ($request) {
+                return $query->where(function ($query) use ($request) {
+                    $query->where('name', 'like', '%' . $request->search . '%')
+                        ->orWhere('email', 'like', '%' . $request->search . '%');
+                });
+            });
+        });
     }
 }

@@ -1,17 +1,18 @@
 <?php
 
-namespace App\Http\Controllers\Api;
+namespace App\Http\Controllers;
 
 use App\Http\Resources\SkillResource;
 use App\Models\Skill;
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
 
 class SkillController extends Controller
 {
     public function index()
     {
-        return response()->json(SkillResource::collection(Skill::all()));
+        return inertia('Skill/index', [
+            'skills' => SkillResource::collection(Skill::all())
+        ]);
     }
 
     public function store(Request $request)
