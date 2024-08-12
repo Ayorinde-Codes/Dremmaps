@@ -17,7 +17,10 @@ const showingNavigationDropdown = ref(false);
                 </Link>
             </div>
             <nav class="mt-6">
-                <NavLink :href="route('categories.index')" :active="route().current('categories.index')">
+                <NavLink :href="route('users.index')" :active="route().current('users.index')">
+                    Users
+                </NavLink>
+                <!-- <NavLink :href="route('categories.index')" :active="route().current('categories.index')">
                     Categories
                 </NavLink>
                 <NavLink :href="route('skill-levels.index')" :active="route().current('skill-levels.index')">
@@ -28,7 +31,7 @@ const showingNavigationDropdown = ref(false);
                 </NavLink>
                 <NavLink :href="route('users.index')" :active="route().current('users.index')">
                     Users
-                </NavLink>
+                </NavLink> -->
             </nav>
         </aside>
 

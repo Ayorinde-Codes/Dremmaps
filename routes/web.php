@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\FeatureController;
 use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\WelcomeController;
 use App\Http\Controllers\SkillSelectionController;
 use App\Http\Controllers\AdditionalDetailsController;
@@ -33,7 +33,6 @@ Route::get('/dashboard', function () {
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::get('/category', [CategoryController::class, 'index'])->name('category.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     // onboarding
@@ -43,6 +42,10 @@ Route::middleware('auth')->group(function () {
     Route::get('/onboarding/additional-details', [AdditionalDetailsController::class, 'showAdditionalDetailsPage'])->name('onboarding.additional-details');
     Route::post('/onboarding/add-user-skills', [SkillSelectionController::class, 'addUserSkills'])->name('onboarding.add-user-skills');
     Route::post('/onboarding/save-additional-details', [AdditionalDetailsController::class, 'saveAdditionalDetails'])->name('onboarding.save-additional-details');
+
+    //users
+    // Route::get('/users', [UserController::class, 'index'])->name('users.index');
+    Route::resource('users', UserController::class);
 });
 
 Route::get('/feature', [FeatureController::class, 'feature'])->name('feature');
