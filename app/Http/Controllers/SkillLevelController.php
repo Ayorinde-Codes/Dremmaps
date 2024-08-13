@@ -2,6 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreSkillLevelRequest;
+use App\Http\Requests\UpdateSkillLevelRequest;
+use App\Http\Resources\CategoryResource;
+use App\Http\Resources\SkillResource;
+use App\Models\Category;
+use App\Models\Skill;
 use App\Models\SkillLevel;
 use Illuminate\Http\Request;
 
@@ -19,31 +25,45 @@ class SkillLevelController extends Controller
             ->where('category_id', $request->category_id)
             ->get();
 
-        return response()->json($skillLevels);
+        return inertia('SkillLevel/Index', [
+            'skilLevels' => $skillLevels,
+            'skills' => SkillResource::collection(Skill::all()),
+            'categories' => CategoryResource::collection(Category::all()),
+        ]);
     }
 
-    public function store(Request $request)
+    public function create()
     {
-        $request->validate([
-            'skill_id' => 'required|exists:skills,id',
-            'category_id' => 'required|exists:categories,id',
-            'video_link' => 'required|string|url',
+        return inertia('SkillLevel/Create', [
+            'skills' => SkillResource::collection(Skill::all()),
+            'categories' => CategoryResource::collection(Category::all()),
         ]);
-
-        $skillLevel = SkillLevel::create($request->validated());
-        return response()->json($skillLevel, 201);
     }
 
-    public function update(Request $request, SkillLevel $skillLevel)
+    public function store(StoreSkillLevelRequest $request)
     {
-        $request->validate([
-            'skill_id' => 'required|exists:skills,id',
-            'category_id' => 'required|exists:categories,id',
-            'video_link' => 'required|string|url',
+        SkillLevel::create($request->validated());
+        return redirect()->route('skillLevel.index');
+    }
+
+    public function edit(SkillLevel $skillLevel)
+    {
+        return inertia('SkillLevel/Edit', [
+            'skillLevel' => $skillLevel,
+            'skills' => SkillResource::collection(Skill::all()),
+            'categories' => CategoryResource::collection(Category::all()),
         ]);
 
+        // return inertia('SkillLevel/Edit', [
+        //     'student' => Skill::make($student),
+        // ]);
+    }
+
+    public function update(UpdateSkillLevelRequest $request, SkillLevel $skillLevel)
+    {
         $skillLevel->update($request->validated());
-        return response()->json($skillLevel);
+
+        return redirect()->route('skillLevel.index');
     }
 
     public function destroy(SkillLevel $skillLevel)

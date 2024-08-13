@@ -5,14 +5,20 @@ import { ref, watch, computed } from "vue";
 
 
 defineProps({
+    skilLevels: {
+        type: Object,
+    },
     skills: {
+        type: Object,
+    },
+    categories: {
         type: Object,
     },
 })
 
 </script>
 <template>
-    <Head title="Skill" />
+    <Head title="Skill Level" />
     <AuthenticatedLayout>
 
     </AuthenticatedLayout>
