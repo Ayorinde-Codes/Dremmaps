@@ -16,7 +16,7 @@ const showingNavigationDropdown = ref(false);
                     <ApplicationLogo class="h-9 w-auto fill-current text-white" />
                 </Link>
             </div>
-            <nav class="mt-6">
+            <nav class="mt-6 space-y-2">
                 <NavLink :href="route('users.index')" :active="route().current('users.index')">
                     Users
                 </NavLink>
@@ -28,9 +28,6 @@ const showingNavigationDropdown = ref(false);
                 </NavLink>
                 <NavLink :href="route('skills.index')" :active="route().current('skills.index')">
                     Skills
-                </NavLink>
-                <NavLink :href="route('users.index')" :active="route().current('users.index')">
-                    Users
                 </NavLink> -->
             </nav>
         </aside>

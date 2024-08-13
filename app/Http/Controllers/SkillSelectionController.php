@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\AddUserSkilllRequest;
 use App\Http\Resources\SkillResource;
 use Illuminate\Http\Request;
 use App\Models\Skill;
@@ -16,15 +17,9 @@ class SkillSelectionController extends Controller
         ]);
     }
 
-    public function addUserSkills(Request $request)
+    public function addUserSkills(AddUserSkilllRequest $request)
     {
-        $request->validate([
-            'skills' => 'required|array',
-            'skills.*' => 'exists:skills,id',
-        ]);
-
         $user = $request->user();
-        dd($user);
 
         // Remove existing skills if you want to replace them
         $user->userSkills()->delete();

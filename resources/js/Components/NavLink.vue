@@ -20,7 +20,13 @@ const classes = computed(() =>
 </script>
 
 <template>
-    <Link :href="href" :class="classes">
+    <Link
+        :href="href"
+        :class="{
+            'block px-4 py-2 text-gray-400 hover:text-gray-200 text-center': !active,
+            'block px-4 py-2 text-center bg-gray-700 text-yellow-400': active
+        }"
+    >
         <slot />
     </Link>
 </template>
