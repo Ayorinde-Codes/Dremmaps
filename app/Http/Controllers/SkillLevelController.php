@@ -69,6 +69,6 @@ class SkillLevelController extends Controller
     public function destroy(SkillLevel $skillLevel)
     {
         $skillLevel->delete();
-        return response()->json(null, 204);
+        return redirect()->route('skillLevel.index');
     }
 }

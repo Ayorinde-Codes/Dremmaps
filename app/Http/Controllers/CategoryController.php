@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreCategoryRequest;
+use App\Http\Requests\UpdateCategoryRequest;
+use App\Http\Resources\CategoryResource;
 use App\Models\Category;
 use Illuminate\Http\Request;
 
@@ -9,26 +12,40 @@ class CategoryController extends Controller
 {
     public function index()
     {
-        return response()->json(Category::get());
+        return inertia('Category/Index', [
+            'categories' => CategoryResource::collection(Category::all()),
+        ]);
     }
 
-    public function store(Request $request)
+    public function create()
     {
-        $request->validate(['name' => 'required|string|max:255']);
+        return inertia('Category/Create', [
+            'categories' => CategoryResource::collection(Category::all()),
+        ]);
+    }
+
+    public function store(StoreCategoryRequest $request)
+    {
         $category = Category::create($request->validated());
-        return response()->json($category, 201);
+        return redirect()->route('categories.index');
     }
 
-    public function update(Request $request, Category $category)
+    public function edit(Category $category)
     {
-        $request->validate(['name' => 'required|string|max:255']);
+        return inertia('Category/Edit', [
+            'category' => CategoryResource::make($category),
+        ]);
+    }
+
+    public function update(UpdateCategoryRequest $request, Category $category)
+    {
         $category->update($request->validated());
-        return response()->json($category);
+        return redirect()->route('categories.index');
     }
 
     public function destroy(Category $category)
     {
         $category->delete();
-        return response()->json(null, 204);
+        return redirect()->route('categories.index');
     }
 }

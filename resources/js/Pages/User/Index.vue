@@ -66,12 +66,13 @@ const deleteUsers = (id) => {
 
     <AuthenticatedLayout>
         <template #header>
-            <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+            <h2 class="font-semibold text-2xl text-gray-800 leading-tight">
                 Users
             </h2>
         </template>
-        <div class="bg-gray-100 py-10">
-            <div class="mx-auto max-w-7xl">
+
+        <div class="py-6 px-4">
+            <div class="mx-auto max-w-full lg:px-4">
                 <div class="px-4 sm:px-6 lg:px-8">
                     <div class="sm:flex sm:items-center">
                         <div class="sm:flex-auto">
@@ -100,20 +101,6 @@ const deleteUsers = (id) => {
                                 class="block rounded-lg border-0 py-2 pl-10 text-gray-900 ring-1 ring-inset ring-gray-200 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                             />
                         </div>
-
-                        <!-- <select
-                            v-model="class_id"
-                            class="block rounded-lg border-0 py-2 ml-5 text-gray-900 ring-1 ring-inset ring-gray-200 placeholder:text-gray-400 sm:text-sm sm:leading-6"
-                        >
-                            <option value="">Filter By Class</option>
-                            <option
-                                :value="item.id"
-                                :key="item.id"
-                                v-for="item in classes.data"
-                            >
-                                {{ item.name }}
-                            </option>
-                        </select> -->
                     </div>
 
                     <div class="mt-8 flex flex-col">
