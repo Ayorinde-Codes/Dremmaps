@@ -20,15 +20,15 @@ const showingNavigationDropdown = ref(false);
                 <NavLink :href="route('users.index')" :active="route().current('users.index')">
                     Users
                 </NavLink>
-                <!-- <NavLink :href="route('categories.index')" :active="route().current('categories.index')">
+                <NavLink :href="route('categories.index')" :active="route().current('categories.index')">
                     Categories
                 </NavLink>
-                <NavLink :href="route('skill-levels.index')" :active="route().current('skill-levels.index')">
+                <NavLink :href="route('skill-level.index')" :active="route().current('skill-level.index')">
                     Skill Levels
                 </NavLink>
                 <NavLink :href="route('skills.index')" :active="route().current('skills.index')">
                     Skills
-                </NavLink> -->
+                </NavLink>
             </nav>
         </aside>
 

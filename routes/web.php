@@ -1,7 +1,10 @@
 <?php
 
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\FeatureController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\SkillController;
+use App\Http\Controllers\SkillLevelController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\WelcomeController;
 use App\Http\Controllers\SkillSelectionController;
@@ -44,8 +47,11 @@ Route::middleware('auth')->group(function () {
     Route::post('/onboarding/save-additional-details', [AdditionalDetailsController::class, 'saveAdditionalDetails'])->name('onboarding.save-additional-details');
 
     //users
-    // Route::get('/users', [UserController::class, 'index'])->name('users.index');
     Route::resource('users', UserController::class);
+    Route::resource('categories', CategoryController::class);
+    Route::resource('skill-level', SkillLevelController::class);
+    Route::resource('skills', SkillController::class);
+
 });
 
 Route::get('/feature', [FeatureController::class, 'feature'])->name('feature');
