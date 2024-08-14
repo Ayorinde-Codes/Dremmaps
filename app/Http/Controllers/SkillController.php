@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreSkillRequest;
+use App\Http\Requests\UpdateSkillRequest;
 use App\Http\Resources\SkillResource;
 use App\Models\Skill;
 use Illuminate\Http\Request;
@@ -15,18 +17,30 @@ class SkillController extends Controller
         ]);
     }
 
-    public function store(Request $request)
+    public function create()
     {
-        $request->validate(['name' => 'required|string|max:255']);
-        $skill = Skill::create($request->validated());
-        return response()->json($skill, 201);
+        return inertia('Skill/Create', [
+            'skills' => SkillResource::collection(Skill::all()),
+        ]);
     }
 
-    public function update(Request $request, Skill $skill)
+    public function store(StoreSkillRequest $request)
     {
-        $request->validate(['name' => 'required|string|max:255']);
+        $skill = Skill::create($request->validated());
+        return redirect()->route('skills.index');
+    }
+
+    public function edit(Skill $skill)
+    {
+        return inertia('Skill/Edit', [
+            'skill' => SkillResource::make($skill),
+        ]);
+    }
+
+    public function update(UpdateSkillRequest $request, Skill $skill)
+    {
         $skill->update($request->validated());
-        return response()->json($skill);
+        return redirect()->route('skills.index');
     }
 
     public function destroy(Skill $skill)
