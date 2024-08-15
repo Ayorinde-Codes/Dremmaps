@@ -1,10 +1,16 @@
 <script setup>
 import { ref } from 'vue';
-import { Link } from '@inertiajs/vue3';
+import { Link, usePage } from '@inertiajs/vue3';
 import ApplicationLogo from '@/Components/ApplicationLogo.vue';
 import NavLink from '@/Components/NavLink.vue';
 
 const showingNavigationDropdown = ref(false);
+
+const page = usePage();
+const userRole = page.props.auth.user.role;
+
+const isAdmin = ref(userRole === 'admin');
+const isUser = ref(userRole === 'user');
 </script>
 
 <template>
@@ -17,17 +23,23 @@ const showingNavigationDropdown = ref(false);
                 </Link>
             </div>
             <nav class="mt-6 space-y-2">
-                <NavLink :href="route('users.index')" :active="route().current('users.index')">
+                <NavLink :href="route('dashboard')" :active="route().current('dashboard')">
+                    Dashboard
+                </NavLink>
+                <NavLink v-if="isAdmin" :href="route('users.index')" :active="route().current('users.index')">
                     Users
                 </NavLink>
-                <NavLink :href="route('categories.index')" :active="route().current('categories.index')">
+                <NavLink v-if="isAdmin" :href="route('categories.index')" :active="route().current('categories.index')">
                     Categories
                 </NavLink>
-                <NavLink :href="route('skill-level.index')" :active="route().current('skill-level.index')">
+                <NavLink v-if="isAdmin" :href="route('skills.index')" :active="route().current('skills.index')">
+                    Skills
+                </NavLink>
+                <NavLink v-if="isAdmin" :href="route('skill-level.index')" :active="route().current('skill-level.index')">
                     Skill Levels
                 </NavLink>
-                <NavLink :href="route('skills.index')" :active="route().current('skills.index')">
-                    Skills
+                <NavLink v-if="isUser || isAdmin" :href="route('user-skill.index')" :active="route().current('user-skill.index')">
+                    Learning
                 </NavLink>
             </nav>
         </aside>
@@ -83,3 +95,30 @@ const showingNavigationDropdown = ref(false);
         </div>
     </div>
 </template>
+
+<style scoped>
+aside {
+    border-right: 1px solid #e5e7eb;
+}
+
+nav a {
+    display: block;
+    padding: 1rem;
+    text-decoration: none;
+    font-size: 1.125rem;
+}
+
+nav a:hover,
+nav a.active {
+    background-color: #4b5563; /* Background color for hover and active states */
+    color: #ffffff; /* Text color for hover and active states */
+}
+
+main {
+    min-height: calc(100vh - 4rem); /* Adjust height based on header and footer */
+}
+
+.bg-gray-100 {
+    background-color: #f3f4f6;
+}
+</style>

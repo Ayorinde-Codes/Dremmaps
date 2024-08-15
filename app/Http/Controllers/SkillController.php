@@ -12,7 +12,7 @@ class SkillController extends Controller
 {
     public function index()
     {
-        return inertia('Skill/index', [
+        return inertia('Skill/Index', [
             'skills' => SkillResource::collection(Skill::all())
         ]);
     }

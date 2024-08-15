@@ -12,7 +12,7 @@ defineProps({
 });
 const page = usePage();
 const isAuthenticated = !!page.props.auth.user;
-// $page.props.auth.user
+
 </script>
 
 <template>
