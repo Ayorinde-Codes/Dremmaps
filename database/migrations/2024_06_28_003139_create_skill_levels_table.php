@@ -17,8 +17,15 @@ return new class extends Migration {
             $table->string('video_link');
             $table->timestamps();
 
+            // Foreign keys
             $table->foreign('skill_id')->references('id')->on('skills')->onDelete('cascade');
             $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
+
+            // Unique constraint to prevent duplicates
+            $table->unique(['skill_id', 'category_id', 'video_link']);
+
+            // Indexes for better performance
+            $table->index(['skill_id', 'category_id']);
         });
     }
 
