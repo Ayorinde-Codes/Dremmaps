@@ -12,6 +12,7 @@ class DashboardController extends Controller
 {
     public function getUsersCount()
     {
+        dd(User::count());
         return response()->json(['count' => User::count()]);
     }
 
@@ -28,10 +29,5 @@ class DashboardController extends Controller
     public function getSkillLevelsCount()
     {
         return response()->json(['count' => SkillLevel::count()]);
-    }
-
-    public function getUserSkillsCount()
-    {
-        return response()->json(['count' => UserSkill::count()]);
     }
 }
