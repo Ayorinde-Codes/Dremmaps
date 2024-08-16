@@ -13,5 +13,4 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::get('/dashboard/categories-count', [DashboardController::class, 'getCategoriesCount']);
     Route::get('/dashboard/skills-count', [DashboardController::class, 'getSkillsCount']);
     Route::get('/dashboard/skill-levels-count', [DashboardController::class, 'getSkillLevelsCount']);
-    Route::get('/dashboard/user-skills-count', [DashboardController::class, 'getUserSkillsCount']);
 });

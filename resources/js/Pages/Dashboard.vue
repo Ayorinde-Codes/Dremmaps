@@ -1,6 +1,63 @@
 <script setup>
+import { ref, onMounted } from 'vue';
+import axios from 'axios';
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
 import { Head } from '@inertiajs/vue3';
+import LineChart from '@/Components/LineChart.vue';
+import BarChart from '@/Components/BarChart.vue';
+
+// Reactive state for counts
+const getUsersCount = ref(0);
+const getCategoriesCount = ref(0);
+const getSkillsCount = ref(0);
+const getSkillLevelsCount = ref(0);
+
+// Fetch data from API
+const fetchDashboardData = async () => {
+    try {
+        const usersResponse = await axios.get('/api/dashboard/users-count');
+        const categoriesResponse = await axios.get('/api/dashboard/categories-count');
+        const skillsResponse = await axios.get('/api/dashboard/skills-count');
+        const skillLevelsResponse = await axios.get('/api/dashboard/skill-levels-count');
+
+        getUsersCount.value = usersResponse.data.count;
+        getCategoriesCount.value = categoriesResponse.data.count;
+        getSkillsCount.value = skillsResponse.data.count;
+        getSkillLevelsCount.value = skillLevelsResponse.data.count;
+    } catch (error) {
+        console.error('Error fetching dashboard data:', error);
+    }
+};
+
+// Fetch data on component mount
+onMounted(() => {
+    fetchDashboardData();
+});
+
+// Sample data for charts, replace with actual data
+const lineChartData = {
+    labels: ['January', 'February', 'March', 'April', 'May'],
+    datasets: [
+        {
+            label: 'User Growth',
+            backgroundColor: '#3b82f6',
+            borderColor: '#1e3a8a',
+            data: [10, 20, 30, 40, 50],
+        },
+    ],
+};
+
+const barChartData = {
+    labels: ['Category A', 'Category B', 'Category C', 'Category D'],
+    datasets: [
+        {
+            label: 'Skills Distribution',
+            backgroundColor: '#10b981',
+            borderColor: '#065f46',
+            data: [15, 25, 35, 45],
+        },
+    ],
+};
 </script>
 
 <template>
@@ -19,33 +76,42 @@ import { Head } from '@inertiajs/vue3';
                             <!-- Card 1 -->
                             <div class="bg-blue-500 text-white p-4 rounded-lg shadow-lg">
                                 <h3 class="text-lg font-semibold">Total Users</h3>
-                                <p class="text-2xl font-bold mt-2">1,234</p>
+                                <p class="text-2xl font-bold mt-2">{{ getUsersCount }}</p>
                                 <p class="mt-2">Total registered users in the system.</p>
                             </div>
 
                             <!-- Card 2 -->
                             <div class="bg-green-500 text-white p-4 rounded-lg shadow-lg">
-                                <h3 class="text-lg font-semibold">Active Courses</h3>
-                                <p class="text-2xl font-bold mt-2">56</p>
-                                <p class="mt-2">Number of active courses available for users.</p>
+                                <h3 class="text-lg font-semibold">Total Skill Levels</h3>
+                                <p class="text-2xl font-bold mt-2">{{ getSkillLevelsCount }}</p>
+                                <p class="mt-2">Number of skill levels available for users.</p>
                             </div>
 
                             <!-- Card 3 -->
                             <div class="bg-yellow-500 text-white p-4 rounded-lg shadow-lg">
-                                <h3 class="text-lg font-semibold">Pending Requests</h3>
-                                <p class="text-2xl font-bold mt-2">12</p>
-                                <p class="mt-2">Requests pending approval or review.</p>
+                                <h3 class="text-lg font-semibold">Total Categories</h3>
+                                <p class="text-2xl font-bold mt-2">{{ getCategoriesCount }}</p>
+                                <p class="mt-2">Total number of categories available.</p>
+                            </div>
+
+                            <!-- Card 4 -->
+                            <div class="bg-red-500 text-white p-4 rounded-lg shadow-lg">
+                                <h3 class="text-lg font-semibold">Total Skills</h3>
+                                <p class="text-2xl font-bold mt-2">{{ getSkillsCount }}</p>
+                                <p class="mt-2">Total number of skills available for users.</p>
                             </div>
                         </div>
 
                         <!-- Chart Section -->
-                        <div class="mt-8 bg-white p-4 rounded-lg shadow-lg">
-                            <h3 class="text-xl font-semibold mb-4">Monthly Overview</h3>
-                            <!-- Replace with your chart component -->
-                            <div class="w-full h-64 bg-gray-200 rounded-lg">
-                                <!-- Chart goes here -->
-                            </div>
+                        <!-- <div class="mt-8 bg-white p-4 rounded-lg shadow-lg">
+                            <h3 class="text-xl font-semibold mb-4">User Growth Overview</h3>
+                            <LineChart :chartData="lineChartData" />
                         </div>
+
+                        <div class="mt-8 bg-white p-4 rounded-lg shadow-lg">
+                            <h3 class="text-xl font-semibold mb-4">Skills Distribution Overview</h3>
+                            <BarChart :chartData="barChartData" />
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -64,6 +130,10 @@ import { Head } from '@inertiajs/vue3';
 
 .bg-yellow-500 {
     background-color: #fbbf24;
+}
+
+.bg-red-500 {
+    background-color: #ef4444;
 }
 
 .text-white {
