@@ -1,16 +1,31 @@
 <script setup>
-import { defineComponent, ref } from 'vue';
 import { Bar } from 'vue-chartjs';
-import { Chart as ChartJS, BarElement, CategoryScale, LinearScale } from 'chart.js';
+import {
+  Chart as ChartJS,
+  Title,
+  Tooltip,
+  Legend,
+  BarElement,
+  CategoryScale,
+  LinearScale,
+} from 'chart.js';
 
-ChartJS.register(BarElement, CategoryScale, LinearScale);
+// Register necessary components
+ChartJS.register(
+  Title,
+  Tooltip,
+  Legend,
+  BarElement,
+  CategoryScale,
+  LinearScale
+);
 
-const props = defineProps({
-    chartData: Object,
-    chartOptions: Object
+// Props to receive the chart data
+defineProps({
+  chartData: Object
 });
 </script>
 
 <template>
-    <Bar :data="props.chartData" :options="props.chartOptions" />
+  <Bar :data="chartData" />
 </template>

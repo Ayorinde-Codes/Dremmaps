@@ -73,28 +73,22 @@ const barChartData = {
                 <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                     <div class="p-6">
                         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                            <!-- Card 1 -->
+                            <!-- Cards remain unchanged -->
                             <div class="bg-blue-500 text-white p-4 rounded-lg shadow-lg">
                                 <h3 class="text-lg font-semibold">Total Users</h3>
                                 <p class="text-2xl font-bold mt-2">{{ getUsersCount }}</p>
                                 <p class="mt-2">Total registered users in the system.</p>
                             </div>
-
-                            <!-- Card 2 -->
                             <div class="bg-green-500 text-white p-4 rounded-lg shadow-lg">
                                 <h3 class="text-lg font-semibold">Total Skill Levels</h3>
                                 <p class="text-2xl font-bold mt-2">{{ getSkillLevelsCount }}</p>
                                 <p class="mt-2">Number of skill levels available for users.</p>
                             </div>
-
-                            <!-- Card 3 -->
                             <div class="bg-yellow-500 text-white p-4 rounded-lg shadow-lg">
                                 <h3 class="text-lg font-semibold">Total Categories</h3>
                                 <p class="text-2xl font-bold mt-2">{{ getCategoriesCount }}</p>
                                 <p class="mt-2">Total number of categories available.</p>
                             </div>
-
-                            <!-- Card 4 -->
                             <div class="bg-red-500 text-white p-4 rounded-lg shadow-lg">
                                 <h3 class="text-lg font-semibold">Total Skills</h3>
                                 <p class="text-2xl font-bold mt-2">{{ getSkillsCount }}</p>
@@ -102,16 +96,22 @@ const barChartData = {
                             </div>
                         </div>
 
-                        <!-- Chart Section -->
-                        <!-- <div class="mt-8 bg-white p-4 rounded-lg shadow-lg">
-                            <h3 class="text-xl font-semibold mb-4">User Growth Overview</h3>
-                            <LineChart :chartData="lineChartData" />
-                        </div>
+                        <!-- Chart Section with Grid -->
+                        <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="bg-white p-4 rounded-lg shadow-lg">
+                                <h3 class="text-xl font-semibold mb-4">User Growth Overview</h3>
+                                <div class="chart-wrapper">
+                                    <LineChart :chartData="lineChartData" />
+                                </div>
+                            </div>
 
-                        <div class="mt-8 bg-white p-4 rounded-lg shadow-lg">
-                            <h3 class="text-xl font-semibold mb-4">Skills Distribution Overview</h3>
-                            <BarChart :chartData="barChartData" />
-                        </div> -->
+                            <div class="bg-white p-4 rounded-lg shadow-lg">
+                                <h3 class="text-xl font-semibold mb-4">Skills Distribution Overview</h3>
+                                <div class="chart-wrapper">
+                                    <BarChart :chartData="barChartData" />
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -120,6 +120,13 @@ const barChartData = {
 </template>
 
 <style scoped>
+/* Adjust the chart container size */
+.chart-wrapper {
+    max-width: 100%; /* Ensure the chart takes full width of its container */
+    max-height: 300px; /* Set the maximum height for the chart */
+    margin: 0 auto; /* Center the chart */
+}
+
 .bg-blue-500 {
     background-color: #3b82f6;
 }
