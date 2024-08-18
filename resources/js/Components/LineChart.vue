@@ -1,16 +1,33 @@
 <script setup>
-import { defineComponent, ref } from 'vue';
 import { Line } from 'vue-chartjs';
-import { Chart as ChartJS, LineElement, CategoryScale, LinearScale } from 'chart.js';
+import {
+  Chart as ChartJS,
+  Title,
+  Tooltip,
+  Legend,
+  LineElement,
+  PointElement,
+  LinearScale,
+  CategoryScale,
+} from 'chart.js';
 
-ChartJS.register(LineElement, CategoryScale, LinearScale);
+// Register necessary components
+ChartJS.register(
+  Title,
+  Tooltip,
+  Legend,
+  LineElement,
+  PointElement,
+  LinearScale,
+  CategoryScale
+);
 
-const props = defineProps({
-    chartData: Object,
-    chartOptions: Object
+// Props to receive the chart data
+defineProps({
+  chartData: Object
 });
 </script>
 
 <template>
-    <Line :data="props.chartData" :options="props.chartOptions" />
+  <Line :data="chartData" />
 </template>
