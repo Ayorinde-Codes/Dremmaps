@@ -171,6 +171,12 @@ import AuthNavigation from '@/Components/AuthNavigation.vue'
   width: 100%;
   overflow: hidden;
   background: #ffffff; /* Card background is now white */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for all cards */
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.pricing-table .ptable-single:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow on hover */
 }
 
 .pricing-table .ptable-header,
@@ -182,7 +188,7 @@ import AuthNavigation from '@/Components/AuthNavigation.vue'
   overflow: hidden;
 }
 
-.pricing-table .ptable-status ,
+.pricing-table .ptable-status,
 .pricing-table .ptable-title,
 .pricing-table .ptable-price,
 .pricing-table .ptable-description,
@@ -194,10 +200,6 @@ import AuthNavigation from '@/Components/AuthNavigation.vue'
 
 .pricing-table .ptable-single {
   background: #ffffff; /* Keep card white */
-}
-
-.pricing-table .ptable-single:hover {
-  box-shadow: 0 0 10px #999999;
 }
 
 .pricing-table .ptable-header {
@@ -314,20 +316,17 @@ import AuthNavigation from '@/Components/AuthNavigation.vue'
   font-weight: 300;
   letter-spacing: 1px;
   padding: 7px;
-  border-bottom: 1px solid #dedede;
-}
-
-.pricing-table .ptable-description ul li:last-child {
-  border: none;
+  border-bottom: 1px solid #f6f8fa;
 }
 
 .pricing-table .ptable-footer {
-  padding-bottom: 30px;
+  padding: 25px 0 40px 0;
 }
 
 .pricing-table .ptable-action a {
+  position: relative;
   display: inline-block;
-  padding: 10px 20px;
+  padding: 10px 30px;
   color: #FF6F61;
   font-size: 14px;
   font-weight: 500;
