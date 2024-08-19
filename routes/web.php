@@ -32,7 +32,7 @@ Route::get('/dashboard', function () {
         [
             'auth',
             'verified',
-            // AdditionalDetailsCompletedMiddleware::class,
+            AdditionalDetailsCompletedMiddleware::class,
         ]
     )->name('dashboard');
 
@@ -56,15 +56,6 @@ Route::middleware('auth')->group(function () {
     // Route::resource('user-skill', UserSkillController::class);
     Route::get('user-skill', [UserSkillController::class, 'index'])->name('user-skill.index');
     Route::get('user-skill/{id}', [UserSkillController::class, 'show'])->name('user-skill.show');
-
-
-    //Dashboard
-    // Route::get('/dashboard/users-count', [DashboardController::class, 'getUsersCount']);
-    // Route::get('/dashboard/categories-count', [DashboardController::class, 'getCategoriesCount']);
-    // Route::get('/dashboard/skills-count', [DashboardController::class, 'getSkillsCount']);
-    // Route::get('/dashboard/skill-levels-count', [DashboardController::class, 'getSkillLevelsCount']);
-    // Route::get('/dashboard/user-skills-count', [DashboardController::class, 'getUserSkillsCount']);
-
 });
 
 Route::get('/feature', [FeatureController::class, 'feature'])->name('feature');

@@ -1,6 +1,6 @@
 <template>
     <div class="navigation">
-        <Link href="">
+        <Link href="/">
             <div class="logo">
                 <span class="dream-maps">DreamMaps</span>
             </div>
