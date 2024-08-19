@@ -34,7 +34,7 @@ onMounted(() => {
     fetchDashboardData();
 });
 
-// Sample data for charts, replace with actual data
+// Sample data for charts, to replace with actual data
 const lineChartData = {
     labels: ['January', 'February', 'March', 'April', 'May'],
     datasets: [
@@ -73,7 +73,6 @@ const barChartData = {
                 <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                     <div class="p-6">
                         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                            <!-- Cards remain unchanged -->
                             <div class="bg-blue-500 text-white p-4 rounded-lg shadow-lg">
                                 <h3 class="text-lg font-semibold">Total Users</h3>
                                 <p class="text-2xl font-bold mt-2">{{ getUsersCount }}</p>
@@ -96,7 +95,7 @@ const barChartData = {
                             </div>
                         </div>
 
-                        <!-- Chart Section with Grid -->
+                        <!-- Chart Section -->
                         <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div class="bg-white p-4 rounded-lg shadow-lg">
                                 <h3 class="text-xl font-semibold mb-4">User Growth Overview</h3>
@@ -120,11 +119,10 @@ const barChartData = {
 </template>
 
 <style scoped>
-/* Adjust the chart container size */
 .chart-wrapper {
-    max-width: 100%; /* Ensure the chart takes full width of its container */
-    max-height: 300px; /* Set the maximum height for the chart */
-    margin: 0 auto; /* Center the chart */
+    max-width: 100%;
+    max-height: 300px;
+    margin: 0 auto;
 }
 
 .bg-blue-500 {

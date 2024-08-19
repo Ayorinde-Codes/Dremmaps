@@ -9,27 +9,90 @@
     </div>
 
     <!-- Pricing Sections -->
-    <div class="pricing-container">
-      <div class="pricing-grid">
-        <div class="pricing-item">
-          <div class="pricing-title">Basic Plan</div>
-          <div class="pricing-price">$9.99/month</div>
-          <div class="pricing-description">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nec ipsum id ligula ultricies volutpat pharetra a nulla.
+    <div class="pricing-table">
+      <div class="ptable-item">
+        <div class="ptable-single">
+          <div class="ptable-header">
+            <div class="ptable-title">
+              <h2>Basic Plan</h2>
+            </div>
+            <div class="ptable-price">
+              <h2><small>$</small>9.99<span>/ M</span></h2>
+            </div>
+          </div>
+          <div class="ptable-body">
+            <div class="ptable-description">
+              <ul>
+                <li>Pure HTML & CSS</li>
+                <li>Responsive Design</li>
+                <li>Well-commented Code</li>
+                <li>Easy to Use</li>
+              </ul>
+            </div>
+          </div>
+          <div class="ptable-footer">
+            <div class="ptable-action">
+              <a href="#">Buy Now</a>
+            </div>
           </div>
         </div>
-        <div class="pricing-item">
-          <div class="pricing-title">Standard Plan</div>
-          <div class="pricing-price">$19.99/month</div>
-          <div class="pricing-description">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nec ipsum id ligula ultricies volutpat pharetra a nulla.
+      </div>
+
+      <div class="ptable-item featured-item">
+        <div class="ptable-single">
+          <div class="ptable-header">
+            <div class="ptable-status">
+              <span>Hot</span>
+            </div>
+            <div class="ptable-title">
+              <h2>Standard Plan</h2>
+            </div>
+            <div class="ptable-price">
+              <h2><small>$</small>19.99<span>/ M</span></h2>
+            </div>
+          </div>
+          <div class="ptable-body">
+            <div class="ptable-description">
+              <ul>
+                <li>Pure HTML & CSS</li>
+                <li>Responsive Design</li>
+                <li>Well-commented Code</li>
+                <li>Easy to Use</li>
+              </ul>
+            </div>
+          </div>
+          <div class="ptable-footer">
+            <div class="ptable-action">
+              <a href="#">Buy Now</a>
+            </div>
           </div>
         </div>
-        <div class="pricing-item">
-          <div class="pricing-title">Premium Plan</div>
-          <div class="pricing-price">$29.99/month</div>
-          <div class="pricing-description">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nec ipsum id ligula ultricies volutpat pharetra a nulla.
+      </div>
+
+      <div class="ptable-item">
+        <div class="ptable-single">
+          <div class="ptable-header">
+            <div class="ptable-title">
+              <h2>Premium Plan</h2>
+            </div>
+            <div class="ptable-price">
+              <h2><small>$</small>29.99<span>/ M</span></h2>
+            </div>
+          </div>
+          <div class="ptable-body">
+            <div class="ptable-description">
+              <ul>
+                <li>Pure HTML & CSS</li>
+                <li>Responsive Design</li>
+                <li>Well-commented Code</li>
+                <li>Easy to Use</li>
+              </ul>
+            </div>
+          </div>
+          <div class="ptable-footer">
+            <div class="ptable-action">
+              <a href="#">Buy Now</a>
+            </div>
           </div>
         </div>
       </div>
@@ -50,13 +113,13 @@ import AuthNavigation from '@/Components/AuthNavigation.vue'
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #FAFAFA;
+  background-color: #FAFAFA; /* Background of the full page */
   padding: 20px;
 }
 
 /* Title Section */
 .title-section {
-  margin: 150px 0 20px 0; /* Added margin-top */
+  margin: 150px 0 20px 0;
 }
 
 .title-text {
@@ -66,123 +129,216 @@ import AuthNavigation from '@/Components/AuthNavigation.vue'
   background: linear-gradient(91.19deg, #D6AD60 33.5%, #705B32 64.3%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  white-space: nowrap; /* Prevent text from breaking */
+  white-space: nowrap;
 }
 
-/* Pricing Container */
-.pricing-container {
+/* Pricing Table */
+.pricing-table {
+  display: flex;
+  flex-flow: row wrap;
   width: 100%;
-  max-width: 1500px;
-  display: flex;
-  flex-direction: column;
-  gap: 70px; /* Increased gap */
-  margin-bottom: 100px; /* Added margin-bottom */
+  max-width: 1100px;
+  margin: 0 auto;
+  background: transparent; /* Changed to blend with the full page background */
 }
 
-.pricing-grid {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 40px; /* Increased gap */
+.pricing-table .ptable-item {
+  width: 33.33%;
+  padding: 0 15px;
+  margin-bottom: 30px;
 }
 
-.pricing-item {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 20px;
-  padding: 20px;
-  background-color: #FFF;
-  border: 1px solid #E0E0E0;
-  border-radius: 10px;
-}
-
-.pricing-title {
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-weight: 800;
-  font-size: 30px;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: #18181B;
-}
-
-.pricing-price {
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-weight: 700;
-  font-size: 24px;
-  color: #D6AD60;
-}
-
-.pricing-description {
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-weight: 500;
-  font-size: 16px;
-  color: #000000;
-  text-align: left;
-}
-
-/* Responsive Design */
-@media (max-width: 1200px) {
-  .title-text {
-    font-size: 40px;
-  }
-
-  .pricing-container {
-    gap: 50px;
-  }
-
-  .pricing-grid {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .pricing-title {
-    font-size: 26px;
-  }
-
-  .pricing-price {
-    font-size: 20px;
-  }
-
-  .pricing-description {
-    font-size: 14px;
+@media (max-width: 992px) {
+  .pricing-table .ptable-item {
+    width: 33.33%;
   }
 }
 
 @media (max-width: 768px) {
-  .title-text {
-    font-size: 36px;
-  }
-
-  .pricing-title {
-    font-size: 22px;
-  }
-
-  .pricing-price {
-    font-size: 18px;
-  }
-
-  .pricing-description {
-    font-size: 12px;
+  .pricing-table .ptable-item {
+    width: 50%;
   }
 }
 
-@media (max-width: 480px) {
-  .title-text {
-    font-size: 28px;
+@media (max-width: 576px) {
+  .pricing-table .ptable-item {
+    width: 100%;
   }
+}
 
-  .pricing-title {
-    font-size: 18px;
-  }
+.pricing-table .ptable-single {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: #ffffff; /* Card background is now white */
+}
 
-  .pricing-price {
-    font-size: 16px;
-  }
+.pricing-table .ptable-header,
+.pricing-table .ptable-body,
+.pricing-table .ptable-footer {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+}
 
-  .pricing-description {
-    font-size: 10px;
-  }
+.pricing-table .ptable-status ,
+.pricing-table .ptable-title,
+.pricing-table .ptable-price,
+.pricing-table .ptable-description,
+.pricing-table .ptable-action {
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
+
+.pricing-table .ptable-single {
+  background: #ffffff; /* Keep card white */
+}
+
+.pricing-table .ptable-single:hover {
+  box-shadow: 0 0 10px #999999;
+}
+
+.pricing-table .ptable-header {
+  margin: 0 30px;
+  padding: 30px 0 45px 0;
+  width: auto;
+  background: #2A293E; /* Keep header background same */
+}
+
+.pricing-table .ptable-header::before,
+.pricing-table .ptable-header::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-bottom: 100px solid #f6f8fa;
+}
+
+.pricing-table .ptable-header::before {
+  right: 50%;
+  border-right: 250px solid transparent;
+}
+
+.pricing-table .ptable-header::after {
+  left: 50%;
+  border-left: 250px solid transparent;
+}
+
+.pricing-table .ptable-item.featured-item .ptable-header {
+  background: #FF6F61; /* Keep featured item header background same */
+}
+
+.pricing-table .ptable-status {
+  margin-top: -30px;
+}
+
+.pricing-table .ptable-status span {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 30px;
+  padding: 5px 0;
+  text-align: center;
+  color: #FF6F61;
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  background: #2A293E; /* Keep status background same */
+}
+
+.pricing-table .ptable-status span::before,
+.pricing-table .ptable-status span::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-bottom: 10px solid #FF6F61;
+}
+
+.pricing-table .ptable-status span::before {
+  right: 50%;
+  border-right: 25px solid transparent;
+}
+
+.pricing-table .ptable-status span::after {
+  left: 50%;
+  border-left: 25px solid transparent;
+}
+
+.pricing-table .ptable-title h2 {
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+
+.pricing-table .ptable-price h2 {
+  margin: 0;
+  color: #ffffff;
+  font-size: 45px;
+  font-weight: 700;
+  margin-left: 15px;
+}
+
+.pricing-table .ptable-price h2 small {
+  position: absolute;
+  font-size: 18px;
+  font-weight: 300;
+  margin-top: 16px;
+  margin-left: -15px;
+}
+
+.pricing-table .ptable-price h2 span {
+  margin-left: 3px;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.pricing-table .ptable-body {
+  padding: 20px 0;
+}
+
+.pricing-table .ptable-description ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pricing-table .ptable-description ul li {
+  color: #2A293E;
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  padding: 7px;
+  border-bottom: 1px solid #dedede;
+}
+
+.pricing-table .ptable-description ul li:last-child {
+  border: none;
+}
+
+.pricing-table .ptable-footer {
+  padding-bottom: 30px;
+}
+
+.pricing-table .ptable-action a {
+  display: inline-block;
+  padding: 10px 20px;
+  color: #FF6F61;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  background: transparent;
+  border: 1px solid #FF6F61;
+  transition: all 0.3s ease;
+}
+
+.pricing-table .ptable-action a:hover {
+  color: #ffffff;
+  background: #FF6F61;
 }
 </style>
