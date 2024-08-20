@@ -113,7 +113,7 @@ import AuthNavigation from '@/Components/AuthNavigation.vue'
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #FAFAFA; /* Background of the full page */
+  background-color: #FAFAFA;
   padding: 20px;
 }
 
@@ -139,7 +139,7 @@ import AuthNavigation from '@/Components/AuthNavigation.vue'
   width: 100%;
   max-width: 1100px;
   margin: 0 auto;
-  background: transparent; /* Changed to blend with the full page background */
+  background: transparent;
 }
 
 .pricing-table .ptable-item {
@@ -170,13 +170,13 @@ import AuthNavigation from '@/Components/AuthNavigation.vue'
   position: relative;
   width: 100%;
   overflow: hidden;
-  background: #ffffff; /* Card background is now white */
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for all cards */
+  background: #ffffff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.3s ease-in-out;
 }
 
 .pricing-table .ptable-single:hover {
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow on hover */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
 .pricing-table .ptable-header,
@@ -199,14 +199,14 @@ import AuthNavigation from '@/Components/AuthNavigation.vue'
 }
 
 .pricing-table .ptable-single {
-  background: #ffffff; /* Keep card white */
+  background: #ffffff;
 }
 
 .pricing-table .ptable-header {
   margin: 0 30px;
   padding: 30px 0 45px 0;
   width: auto;
-  background: #2A293E; /* Keep header background same */
+  background: #2A293E;
 }
 
 .pricing-table .ptable-header::before,
@@ -230,7 +230,7 @@ import AuthNavigation from '@/Components/AuthNavigation.vue'
 }
 
 .pricing-table .ptable-item.featured-item .ptable-header {
-  background: #FF6F61; /* Keep featured item header background same */
+  background: #FF6F61;
 }
 
 .pricing-table .ptable-status {
