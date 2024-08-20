@@ -2,8 +2,9 @@
   <div class="full-page">
     <!-- Navigation Bar -->
     <AuthNavigation :canLogin="canLogin" :canRegister="canRegister" />
+
     <!-- Hero Section -->
-    <div class="hero-section">
+    <section class="hero-section">
       <div class="overlay"></div>
       <div class="hero-content">
         <div class="hero-text">
@@ -15,83 +16,81 @@
           <img src="https://via.placeholder.com/600x400" alt="Hero Image">
         </div>
       </div>
-    </div>
+    </section>
 
     <!-- About Section -->
-    <div class="about-section">
+    <section class="about-section">
       <div class="about-content">
         <div class="about-image">
           <img src="https://via.placeholder.com/400x400" alt="About Us">
         </div>
         <div class="about-text">
-          <span class="about-title">About DreamMaps</span>
-          <div class="about-description">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nec ipsum id ligula ultricies volutpat pharetra a nulla. Vestibulum vel orci sed purus euismod tincidunt. Sed sem ex, feugiat eget pretium nec, malesuada non turpis. Aliquam quis vehicula turpis. Suspendisse imperdiet dui quis lobortis aliquet. Mauris rutrum tortor gravida massa dignissim scelerisque.
-          </div>
+          <h2 class="about-title">About DreamMaps</h2>
+          <p class="about-description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nec ipsum id ligula ultricies volutpat pharetra a nulla. Vestibulum vel orci sed purus euismod tincidunt. Sed sem ex, feugiat eget pretium nec, malesuada non turpis.
+          </p>
         </div>
       </div>
-    </div>
+    </section>
 
     <!-- Features Section -->
-    <div class="features-section">
-      <div class="section-title">Our Features</div>
+    <section class="features-section">
+      <h2 class="section-title">Our Features</h2>
       <div class="features-grid">
         <div class="feature-item">
           <div class="feature-icon"><img src="https://via.placeholder.com/100" alt="Feature 1"></div>
-          <div class="feature-title">Feature One</div>
-          <div class="feature-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+          <h3 class="feature-title">Feature One</h3>
+          <p class="feature-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </div>
         <div class="feature-item">
           <div class="feature-icon"><img src="https://via.placeholder.com/100" alt="Feature 2"></div>
-          <div class="feature-title">Feature Two</div>
-          <div class="feature-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+          <h3 class="feature-title">Feature Two</h3>
+          <p class="feature-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </div>
         <div class="feature-item">
           <div class="feature-icon"><img src="https://via.placeholder.com/100" alt="Feature 3"></div>
-          <div class="feature-title">Feature Three</div>
-          <div class="feature-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+          <h3 class="feature-title">Feature Three</h3>
+          <p class="feature-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </div>
         <div class="feature-item">
           <div class="feature-icon"><img src="https://via.placeholder.com/100" alt="Feature 4"></div>
-          <div class="feature-title">Feature Four</div>
-          <div class="feature-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+          <h3 class="feature-title">Feature Four</h3>
+          <p class="feature-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </div>
       </div>
-    </div>
+    </section>
 
     <!-- Testimonials Section -->
-    <div class="testimonials-section">
-      <div class="section-title">What Our Users Say</div>
+    <section class="testimonials-section">
+      <h2 class="section-title">What Our Users Say</h2>
       <div class="testimonials-grid">
         <div class="testimonial-item">
-          <div class="testimonial-text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vel orci sed purus euismod tincidunt."</div>
-          <div class="testimonial-author">- John Doe</div>
+          <p class="testimonial-text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit."</p>
+          <p class="testimonial-author">- John Doe</p>
         </div>
         <div class="testimonial-item">
-          <div class="testimonial-text">"Suspendisse imperdiet dui quis lobortis aliquet. Mauris rutrum tortor gravida massa dignissim scelerisque."</div>
-          <div class="testimonial-author">- Jane Smith</div>
+          <p class="testimonial-text">"Suspendisse imperdiet dui quis lobortis aliquet."</p>
+          <p class="testimonial-author">- Jane Smith</p>
         </div>
         <div class="testimonial-item">
-          <div class="testimonial-text">"Aenean nec ipsum id ligula ultricies volutpat pharetra a nulla."</div>
-          <div class="testimonial-author">- Mark Johnson</div>
+          <p class="testimonial-text">"Aenean nec ipsum id ligula ultricies volutpat pharetra."</p>
+          <p class="testimonial-author">- Mark Johnson</p>
         </div>
         <div class="testimonial-item">
-          <div class="testimonial-text">"Aliquam quis vehicula turpis. Suspendisse imperdiet dui quis lobortis aliquet."</div>
-          <div class="testimonial-author">- Sarah Brown</div>
+          <p class="testimonial-text">"Aliquam quis vehicula turpis. Suspendisse imperdiet."</p>
+          <p class="testimonial-author">- Sarah Brown</p>
         </div>
       </div>
-    </div>
+    </section>
 
     <!-- Call to Action Section -->
-    <div class="cta-section">
+    <section class="cta-section">
       <div class="cta-content">
-        <div class="cta-text">
-          <span class="cta-title">Join DreamMaps Today</span>
-          <span class="cta-subtitle">Start your journey towards success.</span>
-        </div>
+        <h2 class="cta-title">Join DreamMaps Today</h2>
+        <p class="cta-subtitle">Start your journey towards success.</p>
         <button class="cta-button">Sign Up Now</button>
       </div>
-    </div>
+    </section>
 
     <!-- Footer -->
     <Footer />
@@ -116,295 +115,221 @@ defineProps({
 
 <style scoped>
 .full-page {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #FAFAFA;
-  padding: 20px;
+  background-color: #F5F7FA;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  overflow-x: hidden;
 }
 
 /* Hero Section */
 .hero-section {
-  width: 100%;
-  max-width: 1500px;
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-color: #3D5A80;
+  color: #fff;
   padding: 100px 20px;
-  box-sizing: border-box;
-  background-color: #D6AD60;
-  border-radius: 10px;
-  margin: 20px 0;
-}
-
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  border-radius: 10px;
+  text-align: center;
 }
 
 .hero-content {
-  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
-  color: #FFFFFF;
-}
-
-.hero-text {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  max-width: 600px;
+  flex-wrap: wrap;
 }
 
 .hero-title {
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-weight: 800;
   font-size: 48px;
-  line-height: 1.2;
-  color: #FFFFFF;
+  font-weight: 800;
+  margin-bottom: 20px;
 }
 
 .hero-subtitle {
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-weight: 500;
-  font-size: 24px;
-  color: #FFFFFF;
+  font-size: 20px;
+  margin-bottom: 30px;
 }
 
 .hero-button {
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-weight: 700;
-  font-size: 16px;
-  color: #FFFFFF;
-  background-color: #D6AD60;
+  background-color: #EE6C4D;
   border: none;
-  border-radius: 10px;
-  padding: 12px 24px;
+  padding: 15px 30px;
+  font-size: 16px;
+  font-weight: 700;
+  color: white;
   cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.hero-button:hover {
+  background-color: #E63946;
 }
 
 .hero-image img {
   max-width: 100%;
-  height: auto;
-  border-radius: 10px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
 /* About Section */
 .about-section {
-  width: 100%;
-  max-width: 1500px;
+  background-color: #FFFFFF;
+  padding: 80px 20px;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 50px 20px;
-  box-sizing: border-box;
-  background-color: #FFFFFF;
-  border-radius: 10px;
-  margin: 20px 0;
 }
 
 .about-content {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  width: 100%;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  max-width: 1200px;
 }
 
 .about-image img {
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
   max-width: 100%;
-  height: auto;
-  border-radius: 10px;
-}
-
-.about-text {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  max-width: 600px;
 }
 
 .about-title {
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-weight: 800;
   font-size: 36px;
-  color: #18181B;
+  font-weight: 700;
+  color: #3D5A80;
+  margin-bottom: 20px;
 }
 
 .about-description {
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-weight: 500;
-  font-size: 16px;
-  color: #18181B;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333;
 }
 
 /* Features Section */
 .features-section {
-  width: 100%;
-  max-width: 1500px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 50px 20px;
-  box-sizing: border-box;
-  background-color: #FFFFFF;
-  border-radius: 10px;
-  margin: 20px 0;
+  background-color: #F5F7FA;
+  padding: 80px 20px;
+  text-align: center;
 }
 
 .section-title {
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-weight: 800;
   font-size: 36px;
-  color: #18181B;
-  margin-bottom: 30px;
+  font-weight: 700;
+  color: #3D5A80;
+  margin-bottom: 50px;
 }
 
 .features-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  width: 100%;
+  gap: 40px;
 }
 
 .feature-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 20px;
-  box-sizing: border-box;
-  background-color: #F5F5F5;
+  background-color: #FFFFFF;
   border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
 .feature-icon img {
-  max-width: 100px;
-  height: auto;
+  max-width: 80px;
   margin-bottom: 20px;
 }
 
 .feature-title {
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-weight: 700;
   font-size: 24px;
-  color: #18181B;
-  margin-bottom: 10px;
+  font-weight: 700;
+  color: #3D5A80;
+  margin-bottom: 15px;
 }
 
 .feature-description {
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-weight: 500;
   font-size: 16px;
-  color: #18181B;
+  color: #666;
 }
 
 /* Testimonials Section */
 .testimonials-section {
-  width: 100%;
-  max-width: 1500px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 50px 20px;
-  box-sizing: border-box;
   background-color: #FFFFFF;
-  border-radius: 10px;
-  margin: 20px 0;
+  padding: 80px 20px;
+  text-align: center;
 }
 
 .testimonials-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  width: 100%;
+  gap: 40px;
 }
 
 .testimonial-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 20px;
-  box-sizing: border-box;
-  background-color: #F5F5F5;
+  background-color: #F5F7FA;
   border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
 .testimonial-text {
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-weight: 500;
-  font-size: 16px;
-  color: #18181B;
-  margin-bottom: 10px;
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 15px;
 }
 
 .testimonial-author {
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-weight: 700;
   font-size: 16px;
-  color: #18181B;
+  font-weight: 700;
+  color: #3D5A80;
 }
 
 /* Call to Action Section */
 .cta-section {
-  width: 100%;
-  max-width: 1500px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 50px 20px;
-  box-sizing: border-box;
-  background-color: #D6AD60;
-  border-radius: 10px;
-  margin: 20px 0;
+  background-color: #3D5A80;
+  color: white;
+  padding: 100px 20px;
+  text-align: center;
 }
 
 .cta-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-}
-
-.cta-text {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  max-width: 600px;
-  color: #FFFFFF;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .cta-title {
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-weight: 800;
   font-size: 36px;
-  color: #FFFFFF;
+  font-weight: 700;
+  margin-bottom: 20px;
 }
 
 .cta-subtitle {
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-weight: 500;
-  font-size: 16px;
-  color: #FFFFFF;
+  font-size: 18px;
+  margin-bottom: 30px;
 }
 
 .cta-button {
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-weight: 700;
-  font-size: 16px;
-  color: #FFFFFF;
-  background-color: #18181B;
+  background-color: #EE6C4D;
   border: none;
-  border-radius: 10px;
-  padding: 12px 24px;
+  padding: 15px 30px;
+  font-size: 16px;
+  font-weight: 700;
+  color: white;
   cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #E63946;
 }
 </style>
