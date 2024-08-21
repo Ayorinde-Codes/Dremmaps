@@ -4,93 +4,95 @@
     <AuthNavigation :canLogin="canLogin" :canRegister="canRegister" />
 
     <!-- Hero Section -->
-    <section class="hero-section">
+    <div class="hero-section">
       <div class="overlay"></div>
       <div class="hero-content">
         <div class="hero-text">
-          <h1 class="hero-title">Discover Your Dreams with DreamMaps</h1>
-          <p class="hero-subtitle">Join us to explore, learn, and achieve your goals</p>
-          <button class="hero-button">Get Started</button>
+          <h1 class="hero-title">Transform Learning with DreamMaps</h1>
+          <p class="hero-subtitle">Join us to make learning interactive, fun, and effective</p>
+          <Link :href="route('register')" class="hero-button">Get Started</Link>
         </div>
         <div class="hero-image">
-          <img src="https://via.placeholder.com/600x400" alt="Hero Image">
+          <img src="/assets/images/wave_2.png" alt="Hero Image">
         </div>
       </div>
-    </section>
+    </div>
 
     <!-- About Section -->
-    <section class="about-section">
+    <div class="about-section">
       <div class="about-content">
         <div class="about-image">
-          <img src="https://via.placeholder.com/400x400" alt="About Us">
+          <img src="/assets/images/group.png" alt="About Us">
         </div>
         <div class="about-text">
-          <h2 class="about-title">About DreamMaps</h2>
-          <p class="about-description">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nec ipsum id ligula ultricies volutpat pharetra a nulla. Vestibulum vel orci sed purus euismod tincidunt. Sed sem ex, feugiat eget pretium nec, malesuada non turpis.
-          </p>
+          <span class="about-title">About DreamMaps</span>
+          <div class="about-description">
+            DreamMaps is your go-to platform for an engaging and interactive learning experience. We bring education to life with dynamic content, personalized learning paths, and tools that make education both enjoyable and effective. Let’s help you reach your fullest potential.
+          </div>
         </div>
       </div>
-    </section>
+    </div>
 
     <!-- Features Section -->
-    <section class="features-section">
-      <h2 class="section-title">Our Features</h2>
+    <div class="features-section">
+      <div class="section-title">Our Features</div>
       <div class="features-grid">
         <div class="feature-item">
-          <div class="feature-icon"><img src="https://via.placeholder.com/100" alt="Feature 1"></div>
-          <h3 class="feature-title">Feature One</h3>
-          <p class="feature-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <div class="feature-icon"><img src="/assets/images/icons/play-icon.png" alt="Interactive Lessons"></div>
+          <div class="feature-title">Interactive Lessons</div>
+          <div class="feature-description">Engage with content through videos, quizzes, and activities.</div>
         </div>
         <div class="feature-item">
-          <div class="feature-icon"><img src="https://via.placeholder.com/100" alt="Feature 2"></div>
-          <h3 class="feature-title">Feature Two</h3>
-          <p class="feature-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <div class="feature-icon"><img src="/assets/images/icons/path-icon.png" alt="Personalized Learning"></div>
+          <div class="feature-title">Personalized Learning Paths</div>
+          <div class="feature-description">Tailor your learning experience to match your goals and interests.</div>
         </div>
         <div class="feature-item">
-          <div class="feature-icon"><img src="https://via.placeholder.com/100" alt="Feature 3"></div>
-          <h3 class="feature-title">Feature Three</h3>
-          <p class="feature-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <div class="feature-icon"><img src="/assets/images/icons/rewards-icon.png" alt="Gamification"></div>
+          <div class="feature-title">Gamification</div>
+          <div class="feature-description">Earn rewards and badges as you progress through your courses.</div>
         </div>
         <div class="feature-item">
-          <div class="feature-icon"><img src="https://via.placeholder.com/100" alt="Feature 4"></div>
-          <h3 class="feature-title">Feature Four</h3>
-          <p class="feature-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <div class="feature-icon"><img src="/assets/images/icons/community-icon.png" alt="Community"></div>
+          <div class="feature-title">Supportive Community</div>
+          <div class="feature-description">Connect with peers and mentors to stay motivated.</div>
         </div>
       </div>
-    </section>
+    </div>
 
     <!-- Testimonials Section -->
-    <section class="testimonials-section">
-      <h2 class="section-title">What Our Users Say</h2>
+    <div class="testimonials-section">
+      <div class="section-title">What Our Learners Say</div>
       <div class="testimonials-grid">
         <div class="testimonial-item">
-          <p class="testimonial-text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit."</p>
-          <p class="testimonial-author">- John Doe</p>
+          <div class="testimonial-text">"DreamMaps turned studying into something I actually enjoy! The interactive lessons make it easy to learn."</div>
+          <div class="testimonial-author">- John Doe</div>
         </div>
         <div class="testimonial-item">
-          <p class="testimonial-text">"Suspendisse imperdiet dui quis lobortis aliquet."</p>
-          <p class="testimonial-author">- Jane Smith</p>
+          <div class="testimonial-text">"The personalized paths helped me focus on the skills I needed most. I couldn’t be happier with my progress!"</div>
+          <div class="testimonial-author">- Jane Smith</div>
         </div>
         <div class="testimonial-item">
-          <p class="testimonial-text">"Aenean nec ipsum id ligula ultricies volutpat pharetra."</p>
-          <p class="testimonial-author">- Mark Johnson</p>
+          <div class="testimonial-text">"Earning badges and rewards keeps me motivated. DreamMaps made learning fun!"</div>
+          <div class="testimonial-author">- Mark Johnson</div>
         </div>
         <div class="testimonial-item">
-          <p class="testimonial-text">"Aliquam quis vehicula turpis. Suspendisse imperdiet."</p>
-          <p class="testimonial-author">- Sarah Brown</p>
+          <div class="testimonial-text">"Being part of a community where I can ask questions and share ideas has been incredibly valuable."</div>
+          <div class="testimonial-author">- Sarah Brown</div>
         </div>
       </div>
-    </section>
+    </div>
 
     <!-- Call to Action Section -->
-    <section class="cta-section">
+    <div class="cta-section">
       <div class="cta-content">
-        <h2 class="cta-title">Join DreamMaps Today</h2>
-        <p class="cta-subtitle">Start your journey towards success.</p>
-        <button class="cta-button">Sign Up Now</button>
+        <div class="cta-text">
+          <span class="cta-title">Ready to Learn with DreamMaps?</span>
+          <span class="cta-subtitle">Start your journey towards success with fun and engaging courses.</span>
+        </div>
+        <Link :href="route('register')" class="cta-button">Sign Up Now</Link>
       </div>
-    </section>
+    </div>
 
     <!-- Footer -->
     <Footer />
@@ -100,6 +102,7 @@
 <script setup>
 import Footer from '@/Components/Footer.vue';
 import AuthNavigation from '@/Components/AuthNavigation.vue';
+import { Link } from '@inertiajs/vue3';
 
 defineProps({
     canLogin: {
@@ -115,221 +118,288 @@ defineProps({
 
 <style scoped>
 .full-page {
-  background-color: #F5F7FA;
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #FAFAFA;
+  padding: 20px;
 }
 
 /* Hero Section */
 .hero-section {
+  width: 100%;
+  max-width: 1500px;
   position: relative;
-  background-color: #3D5A80;
-  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 100px 20px;
-  text-align: center;
+  box-sizing: border-box;
+  background-color: #D6AD60;
+  border-radius: 10px;
+  margin: 20px 0;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
 }
 
 .hero-content {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
+  width: 100%;
+  color: #FFFFFF;
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 600px;
 }
 
 .hero-title {
-  font-size: 48px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-weight: 800;
-  margin-bottom: 20px;
+  font-size: 48px;
+  line-height: 1.2;
+  color: #FFFFFF;
 }
 
 .hero-subtitle {
-  font-size: 20px;
-  margin-bottom: 30px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  color: #FFFFFF;
 }
 
 .hero-button {
-  background-color: #EE6C4D;
-  border: none;
-  padding: 15px 30px;
-  font-size: 16px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-weight: 700;
-  color: white;
+  font-size: 16px;
+  color: #FFFFFF;
+  background-color: #D6AD60;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 24px;
   cursor: pointer;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
-
-.hero-button:hover {
-  background-color: #E63946;
+  text-decoration: none;
 }
 
 .hero-image img {
   max-width: 100%;
-  border-radius: 15px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  height: auto;
+  border-radius: 10px;
 }
 
 /* About Section */
 .about-section {
-  background-color: #FFFFFF;
-  padding: 80px 20px;
+  width: 100%;
+  max-width: 1500px;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 50px 20px;
+  box-sizing: border-box;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  margin: 20px 0;
 }
 
 .about-content {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  max-width: 1200px;
+  width: 100%;
 }
 
 .about-image img {
-  border-radius: 15px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
   max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.about-text {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 600px;
 }
 
 .about-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 800;
   font-size: 36px;
-  font-weight: 700;
-  color: #3D5A80;
-  margin-bottom: 20px;
+  color: #18181B;
 }
 
 .about-description {
-  font-size: 18px;
-  line-height: 1.6;
-  color: #333;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #18181B;
 }
 
 /* Features Section */
 .features-section {
-  background-color: #F5F7FA;
-  padding: 80px 20px;
-  text-align: center;
+  width: 100%;
+  max-width: 1500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 20px;
+  box-sizing: border-box;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  margin: 20px 0;
 }
 
 .section-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 800;
   font-size: 36px;
-  font-weight: 700;
-  color: #3D5A80;
-  margin-bottom: 50px;
+  color: #18181B;
+  margin-bottom: 30px;
 }
 
 .features-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 40px;
+  gap: 20px;
+  width: 100%;
 }
 
 .feature-item {
-  background-color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: #F1F1F1;
   border-radius: 10px;
-  padding: 30px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.feature-item:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  padding: 20px;
 }
 
 .feature-icon img {
-  max-width: 80px;
+  max-width: 50px;
+  height: auto;
   margin-bottom: 20px;
 }
 
 .feature-title {
-  font-size: 24px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-weight: 700;
-  color: #3D5A80;
-  margin-bottom: 15px;
+  font-size: 20px;
+  color: #18181B;
 }
 
 .feature-description {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 500;
   font-size: 16px;
-  color: #666;
+  color: #18181B;
 }
 
 /* Testimonials Section */
 .testimonials-section {
-  background-color: #FFFFFF;
-  padding: 80px 20px;
-  text-align: center;
+  width: 100%;
+  max-width: 1500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 20px;
+  box-sizing: border-box;
+  background-color: #D6AD60;
+  border-radius: 10px;
+  margin: 20px 0;
 }
 
 .testimonials-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 40px;
+  gap: 20px;
+  width: 100%;
 }
 
 .testimonial-item {
-  background-color: #F5F7FA;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: #FFFFFF;
   border-radius: 10px;
-  padding: 30px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.testimonial-item:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  padding: 20px;
 }
 
 .testimonial-text {
-  font-size: 18px;
-  color: #666;
-  margin-bottom: 15px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #18181B;
+  margin-bottom: 10px;
 }
 
 .testimonial-author {
-  font-size: 16px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-weight: 700;
-  color: #3D5A80;
+  font-size: 14px;
+  color: #18181B;
 }
 
 /* Call to Action Section */
 .cta-section {
-  background-color: #3D5A80;
-  color: white;
-  padding: 100px 20px;
-  text-align: center;
+  width: 100%;
+  max-width: 1500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px;
+  box-sizing: border-box;
+  background-color: #F1F1F1;
+  border-radius: 10px;
+  margin: 20px 0;
 }
 
 .cta-content {
-  max-width: 800px;
-  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .cta-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 800;
   font-size: 36px;
-  font-weight: 700;
-  margin-bottom: 20px;
+  color: #18181B;
+  margin-bottom: 10px;
 }
 
 .cta-subtitle {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 500;
   font-size: 18px;
-  margin-bottom: 30px;
+  color: #18181B;
+  margin-bottom: 20px;
 }
 
 .cta-button {
-  background-color: #EE6C4D;
-  border: none;
-  padding: 15px 30px;
-  font-size: 16px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-weight: 700;
-  color: white;
+  font-size: 16px;
+  color: #FFFFFF;
+  background-color: #D6AD60;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 24px;
   cursor: pointer;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
-
-.cta-button:hover {
-  background-color: #E63946;
+  text-decoration: none;
 }
 </style>
