@@ -13,6 +13,8 @@
 
 ## Screenshots
 - **Dashboard**
+<img width="896" alt="Screenshot 2024-08-22 at 00 36 46" src="https://github.com/user-attachments/assets/c3e86fb5-0d58-48ff-953f-d7fc25603868">
+
 - **Onboarding Process**
 - **Skill Selection**
 - **User Profile**
