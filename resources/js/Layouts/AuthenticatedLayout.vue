@@ -16,10 +16,12 @@ const isUser = ref(userRole === 'user');
 <template>
     <div class="min-h-screen flex">
         <!-- Sidebar -->
-        <aside class="w-64 bg-gray-800 text-white">
-            <div class="p-4">
+        <aside class="w-64 bg-gray-800 text-white flex flex-col">
+            <div class="p-4 flex justify-center items-center">
                 <Link :href="route('dashboard')">
-                    <ApplicationLogo class="h-9 w-auto fill-current text-white" />
+                    <div class="logo">
+                        <span class="dream-maps">DreamMaps</span>
+                    </div>
                 </Link>
             </div>
             <nav class="mt-6 space-y-2">
@@ -97,6 +99,21 @@ const isUser = ref(userRole === 'user');
 </template>
 
 <style scoped>
+.logo {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+
+.dream-maps {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 800;
+  font-size: 16px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
 aside {
     border-right: 1px solid #e5e7eb;
 }
