@@ -53,7 +53,6 @@ Route::middleware('auth')->group(function () {
     Route::resource('categories', CategoryController::class);
     Route::resource('skill-level', SkillLevelController::class);
     Route::resource('skills', SkillController::class);
-    // Route::resource('user-skill', UserSkillController::class);
     Route::get('user-skill', [UserSkillController::class, 'index'])->name('user-skill.index');
     Route::get('user-skill/{id}', [UserSkillController::class, 'show'])->name('user-skill.show');
 });
