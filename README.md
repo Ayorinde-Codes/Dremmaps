@@ -12,12 +12,22 @@
 - **Secure Backend**: Powered by Laravel with authentication using Laravel Breeze.
 
 ## Screenshots
-- **Dashboard**
+- **Dashboard**:
 <img width="896" alt="Screenshot 2024-08-22 at 00 36 46" src="https://github.com/user-attachments/assets/c3e86fb5-0d58-48ff-953f-d7fc25603868">
 
-- **Onboarding Process**
+### **Onboarding Process**
+- **Sign in**:
+  <img width="1737" alt="Screenshot 2024-08-22 at 00 35 26" src="https://github.com/user-attachments/assets/18974717-c59e-4881-b6d6-abcddf557253">
+- **Sign up**:
+  <img width="1737" alt="Screenshot 2024-08-22 at 00 36 02" src="https://github.com/user-attachments/assets/00da579e-9dde-4119-aee6-1d1352536ba2">
+- **Additional Details**:
+  <img width="1766" alt="Screenshot 2024-08-22 at 00 38 55" src="https://github.com/user-attachments/assets/8cff3acc-80d5-4965-984d-6be7035af002">
+  
 - **Skill Selection**
-- **User Profile**
+    <img width="1737" alt="Screenshot 2024-08-22 at 00 51 31" src="https://github.com/user-attachments/assets/9f289578-3f08-47fa-9ba3-54ade1ab6e37">
+- **Learning**:
+<img width="1737" alt="Screenshot 2024-08-22 at 00 37 11" src="https://github.com/user-attachments/assets/7494594a-745c-4f1a-9263-d5e847152371">
+<img width="1737" alt="Screenshot 2024-08-22 at 00 37 25" src="https://github.com/user-attachments/assets/7c2279d1-f2c6-4026-a01e-0cc9546144d0">
 
 ## Setup Instructions
 ### Prerequisites
