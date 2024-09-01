@@ -1,7 +1,7 @@
-# DreamMaps - Simplified Learning Management System (LMS) + Student Skills and Interests Tracker
+# DreamMaps - Simplified Learning Management System (LMS)
 
 ## Overview
-**DreamMaps** is a modern and simplified Learning Management System (LMS) combined with a Student Skills and Interests Tracker. The system allows users to track their skills, categorize them into different proficiency levels (**newbie**, **intermediate**, **advanced**), and follow a structured onboarding process after signup. DreamMaps ensures that users complete their onboarding before accessing the dashboard, enhancing the user experience and guiding them through the system.
+**DreamMaps** is a simplified Learning Management System (LMS) combined with a Student Skills and Interests Tracker. The system allows users to track their skills, categorize them into different proficiency levels (**newbie**, **intermediate**, **advanced**), and follow a structured onboarding process after signup. DreamMaps ensures that users complete their onboarding before accessing the dashboard, enhancing the user experience and guiding them through the system.
 
 ## Key Features
 - **User Roles**: Role-based access control to manage users and their privileges.
@@ -35,7 +35,7 @@
 - Composer
 - Node.js and npm
 - MySQL / PostgreSQL / Sqlite
-- Laravel 9+
+- Laravel 11
 - Vue.js 3.x
 - Inertia.js
 
